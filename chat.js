@@ -13,7 +13,7 @@ function sendMessage() {
   userDiv.innerText = 'You: ' + userText;
   messages.appendChild(userDiv);
 
-  // Simulate GPT response (replace this with real API call later)
+  // Simulated GPT response (replace with real backend later)
   const botDiv = document.createElement('div');
   botDiv.className = 'bot-message';
   botDiv.innerText = 'GPT: (This will be powered by GPT soon!)';

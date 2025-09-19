@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,82 +7,101 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f7f9;
-  color: #333;
+  background: #f0f4f8;
+  color: #1f2937;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #1e293b;
+  background-color: #1e3a8a; /* Deep Blue */
   color: white;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
-/* Navigation bar */
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #e0e7ff;
+}
+
+/* Navigation Bar (Horizontal Toolbar) */
 nav {
-  background-color: #334155;
+  background-color: #1e40af;
   padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
+  list-style: none;
   gap: 30px;
 }
 
 nav ul li a {
-  color: #f1f5f9;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 16px;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
 }
 
 nav ul li a:hover {
-  background-color: #475569;
-  border-radius: 5px;
+  background-color: #3b82f6;
   color: white;
 }
 
 /* Main content */
 main {
-  padding: 30px 20px;
+  padding: 40px 20px;
   max-width: 900px;
   margin: auto;
 }
 
+/* Section Styles */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-/* Apps section */
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* App List */
 #apps ul {
   list-style-type: none;
   padding-left: 0;
 }
 
 #apps li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
 }
 
 #apps a {
+  color: #2563eb;
   text-decoration: none;
-  color: #1e40af;
-  font-weight: 500;
 }
 
 #apps a:hover {
   text-decoration: underline;
 }
 
-/* Chatbox */
+/* Chat Section */
 #chatbox {
-  background: #e2e8f0;
-  padding: 20px;
-  border-radius: 10px;
+  background: #e0f2fe;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #bae6fd;
 }
 
 #chat-container {
@@ -92,23 +111,23 @@ section {
 }
 
 #messages {
-  background: #fff;
+  background: white;
   height: 220px;
   overflow-y: auto;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
 .user-message {
   text-align: right;
-  color: #2563eb;
+  color: #1d4ed8;
   margin-bottom: 5px;
 }
 
 .bot-message {
   text-align: left;
-  color: #16a34a;
+  color: #059669;
   margin-bottom: 5px;
 }
 
@@ -122,7 +141,7 @@ section {
   padding: 10px;
   font-size: 16px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #cbd5e1;
 }
 
 .chat-input button {
@@ -136,18 +155,37 @@ section {
 }
 
 .chat-input button:hover {
-  background: #1e3a8a;
+  background: #1d4ed8;
+}
+
+/* About / Contact */
+#about, #contact {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+#contact a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  background-color: #1e293b;
+  background-color: #1e3a8a;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  margin-top: 40px;
+  font-size: 0.95em;
 }
 
-/* Responsive adjustments */
+/* Mobile Responsive */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;

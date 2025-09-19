@@ -1,71 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Apps - Free Downloads</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <h1>Welcome to My Apps</h1>
     <p>Free downloads for useful programs</p>
   </header>
-  <section id="apps">
-    <h2>Featured Apps</h2>
-    <ul>
-      <li><a href="path/to/app1.zip">App 1</a></li>
-      <li><a href="path/to/app2.zip">App 2</a></li>
-      <!-- Add more apps as you upload them -->
-    </ul>
-  </section>
-  <section id="chatbox">
-  <h2>Ask Me Anything!</h2>
-  <div id="chat-container">
-    <div id="messages"></div>
-    <input type="text" id="user-input" placeholder="Ask a question..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
 
+  <main>
+    <!-- Featured Apps Section -->
     <section id="apps">
-  <h2>Featured Apps</h2>
-  <ul>
-    <li><a href="downloads/app1.zip" download>App 1 - Calculator Tool</a></li>
-    <li><a href="downloads/app2.zip" download>App 2 - File Organizer</a></li>
-  </ul>
-</section>
+      <h2>Featured Apps</h2>
+      <ul>
+        <li><a href="downloads/app1.zip" download>App 1 - Calculator Tool</a></li>
+        <li><a href="downloads/app2.zip" download>App 2 - File Organizer</a></li>
+        <!-- Add more apps as needed -->
+      </ul>
+    </section>
 
-  </section>
+    <!-- GPT Chatbox Section -->
+    <section id="chatbox">
+      <h2>Ask Me Anything!</h2>
+      <div id="chat-container">
+        <div id="messages"></div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Ask a question..." />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-    </div>
-  </section>
   <footer>
     <p>&copy; 2025 My Apps</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="chat.js"></script>
 </body>
-  <script>
-  const messages = document.getElementById('messages');
-
-  function sendMessage() {
-    const input = document.getElementById('user-input');
-    const userText = input.value.trim();
-    if (!userText) return;
-
-    // Display user message
-    const userDiv = document.createElement('div');
-    userDiv.className = 'user-message';
-    userDiv.innerText = 'You: ' + userText;
-    messages.appendChild(userDiv);
-
-    // Placeholder bot response
-    const botDiv = document.createElement('div');
-    botDiv.className = 'bot-message';
-    botDiv.innerText = 'GPT: (This will be powered by GPT soon!)';
-    messages.appendChild(botDiv);
-
-    input.value = '';
-  }
-</script>
-
 </html>

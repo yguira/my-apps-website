@@ -1,3 +1,5 @@
+// chat.js
+
 const messages = document.getElementById('messages');
 
 function sendMessage() {
@@ -11,14 +13,15 @@ function sendMessage() {
   userDiv.innerText = 'You: ' + userText;
   messages.appendChild(userDiv);
 
-  // Scroll to bottom
-  messages.scrollTop = messages.scrollHeight;
-
-  // Simulate GPT response (Replace this later with actual API call)
+  // Simulate GPT response (replace this with real API call later)
   const botDiv = document.createElement('div');
   botDiv.className = 'bot-message';
   botDiv.innerText = 'GPT: (This will be powered by GPT soon!)';
   messages.appendChild(botDiv);
 
+  // Scroll to latest
+  messages.scrollTop = messages.scrollHeight;
+
+  // Clear input
   input.value = '';
 }

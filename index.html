@@ -20,13 +20,52 @@
     </ul>
   </section>
   <section id="chatbox">
-    <h2>Ask Me Anything!</h2>
-    <div id="chat-container">
-      <!-- Placeholder for GPT-powered chatbox -->
+  <h2>Ask Me Anything!</h2>
+  <div id="chat-container">
+    <div id="messages"></div>
+    <input type="text" id="user-input" placeholder="Ask a question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+    <section id="apps">
+  <h2>Featured Apps</h2>
+  <ul>
+    <li><a href="downloads/app1.zip" download>App 1 - Calculator Tool</a></li>
+    <li><a href="downloads/app2.zip" download>App 2 - File Organizer</a></li>
+  </ul>
+</section>
+
+  </section>
+
+
     </div>
   </section>
   <footer>
     <p>&copy; 2025 My Apps</p>
   </footer>
 </body>
+  <script>
+  const messages = document.getElementById('messages');
+
+  function sendMessage() {
+    const input = document.getElementById('user-input');
+    const userText = input.value.trim();
+    if (!userText) return;
+
+    // Display user message
+    const userDiv = document.createElement('div');
+    userDiv.className = 'user-message';
+    userDiv.innerText = 'You: ' + userText;
+    messages.appendChild(userDiv);
+
+    // Placeholder bot response
+    const botDiv = document.createElement('div');
+    botDiv.className = 'bot-message';
+    botDiv.innerText = 'GPT: (This will be powered by GPT soon!)';
+    messages.appendChild(botDiv);
+
+    input.value = '';
+  }
+</script>
+
 </html>

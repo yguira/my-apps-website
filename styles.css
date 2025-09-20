@@ -7,10 +7,15 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f4f8;
+  background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   color: #1f2937;
   line-height: 1.6;
 }
+
 
 /* Header */
 header {

@@ -19,7 +19,7 @@ body {
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.85); /* light overlay */
+  background-color: rgba(255, 255, 255, 0.3); /* light overlay */
   min-height: 100vh;
   padding: 20px;
 }

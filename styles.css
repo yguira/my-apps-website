@@ -3,10 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
 body {
-  background-image: url('images/background1.jpg'); /* or full URL */
+  background-image: url('images/background1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,16 +12,16 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #1f2937;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
-  color: white; /* optional */
-  min-height: 100vh;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* or 0.6 */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
 }
+
 
 
 

@@ -265,3 +265,19 @@ footer {
 .quiz-button:hover {
   background-color: #2563eb;
 }
+.quiz-button {
+  display: inline-block;
+  background-color: #1e40af;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.quiz-button:hover {
+  background-color: #2563eb;
+}

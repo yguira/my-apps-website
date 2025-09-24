@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Trivia Quiz</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>💻 Tech Trivia Quiz</h1>
+    </header>
+    <main>
+      <section id="quiz-container">
+        <div id="question-box">
+          <h2 id="question">Loading question...</h2>
+          <div id="choices"></div>
+        </div>
+        <div id="feedback"></div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+        <div id="score-box" style="display:none;"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+    </footer>
+  </div>
+  <script src="tech-trivia.js"></script>
+</body>
+</html>

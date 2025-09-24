@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>➕ Math Challenge</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>➕ Math Challenge</h1>
+    </header>
+    <main>
+      <section id="quiz-container">
+        <div id="question-box">
+          <h2 id="question">Question will appear here...</h2>
+          <div id="choices"></div>
+        </div>
+
+        <div id="feedback"></div>
+
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+
+        <div id="score-box" style="display: none;"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+    </footer>
+  </div>
+
+  <!-- ✅  this script must contains math questions -->
+  <script src="math-quiz.js"></script>
+</body>
+</html>

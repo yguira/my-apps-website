@@ -56,13 +56,22 @@ let score = 0;
 let timer;
 let timeLeft = 15;
 
+// Shuffle the questions array before starting
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// DOM Elements
 const questionElem = document.getElementById("question");
 const choicesElem = document.getElementById("choices");
 const feedbackElem = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
 const scoreBox = document.getElementById("score-box");
 
-// Add a timer display
+// Timer display
 const timerElem = document.createElement("div");
 timerElem.id = "timer";
 timerElem.style.fontWeight = "bold";
@@ -153,8 +162,10 @@ function resetQuiz() {
   document.getElementById("question-box").style.display = "block";
   nextBtn.style.display = "inline-block";
   timerElem.style.display = "block";
+  shuffle(questions); // Shuffle again on reset
   loadQuestion();
 }
 
-// Start the quiz
+// Initialize Quiz
+shuffle(questions);
 loadQuestion();

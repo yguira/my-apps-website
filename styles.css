@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
 body {
   background-image: url('images/background1.jpg');
   background-size: cover;
@@ -16,18 +18,15 @@ body {
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.7); /* or 0.6 */
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 10px;
 }
 
-
-
-
 /* Header */
 header {
-  background-color: #1e3a8a; /* Deep Blue */
+  background-color: #1e3a8a;
   color: white;
   padding: 30px 0;
   text-align: center;
@@ -43,7 +42,7 @@ header p {
   color: #e0e7ff;
 }
 
-/* Navigation Bar (Horizontal Toolbar) */
+/* Navigation Bar */
 nav {
   background-color: #1e40af;
   padding: 10px 0;
@@ -214,8 +213,8 @@ footer {
     width: 100%;
   }
 }
-/* 🎨 Fun Quizzes Styling */
 
+/* 🎨 Fun Quizzes Styling */
 .quiz-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -251,20 +250,33 @@ footer {
   margin-bottom: 15px;
 }
 
-.quiz-button {
-  display: inline-block;
-  background-color: #1e40af;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
+/* 💡 ANSWER BUTTONS: Vertical alignment and full-width */
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-.quiz-button:hover {
+#choices .quiz-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+#choices .quiz-button:hover {
   background-color: #2563eb;
 }
+
+/* Generic Quiz Buttons (Next, Restart) */
 .quiz-button {
   display: inline-block;
   background-color: #1e40af;
@@ -275,21 +287,17 @@ footer {
   text-decoration: none;
   transition: background 0.3s ease;
   margin: 8px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .quiz-button:hover {
   background-color: #2563eb;
 }
+
+/* Timer Display */
 #timer {
   font-size: 18px;
   color: #444;
   margin-bottom: 10px;
-}
-
-.quiz-button {
-  margin: 5px;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
 }

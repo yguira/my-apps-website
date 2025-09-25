@@ -303,3 +303,22 @@ footer {
   color: #444;
   margin-bottom: 10px;
 }
+/* 🎯 Style the NEXT button to be bigger and colorful */
+#next-btn {
+  background-color: #10b981; /* Emerald green */
+  color: white;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#next-btn:hover {
+  background-color: #059669; /* darker green on hover */
+  transform: scale(1.05); /* subtle zoom effect */
+  cursor: pointer;
+}

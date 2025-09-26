@@ -322,3 +322,40 @@ footer {
   transform: scale(1.05); /* subtle zoom effect */
   cursor: pointer;
 }
+/* Wrap nav items and search bar in one row */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Style the search bar */
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+#search-form button {
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #1e40af;
+  color: white;
+  border: 1px solid #1e40af;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #2563eb;
+}
+

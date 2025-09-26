@@ -14,25 +14,62 @@
   </header>
 
   <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-container"> <!-- ✅ Wrap nav items + search for layout control -->
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#chatbox">Chat</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="downloads.html">Free Downloads</a></li>
-        <li><a href="quizzes.html">🎯Quizzes</a></li>
-        <li><a href="#Programmer">Programmer</a></li>
-      </ul>
+  <!-- Navbar placeholder -->
+<div id="navbar"></div>
 
-      <!-- ✅ Search Bar -->
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Search apps or sections..." />
-        <button type="submit">🔍</button>
-      </form>
-    </div>
-  </nav>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+
+      // Add search form functionality after navbar loads
+      const searchForm = document.getElementById('search-form');
+      const searchInput = document.getElementById('search-input');
+
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const query = searchInput.value.toLowerCase().trim();
+
+          const routes = {
+            'chat': 'index.html#chatbox',
+            'contact': 'index.html#contact',
+            'about': 'index.html#about',
+            'quizzes': 'quizzes.html',
+            'quiz': 'quizzes.html',
+            'downloads': 'downloads.html',
+            'download': 'downloads.html',
+            'programmer': 'index.html#Programmer',
+            'home': 'index.html#home',
+            'vlc': 'downloads.html',
+            'vlc media player': 'downloads.html',
+            'media player': 'downloads.html',
+            '7zip': 'downloads.html',
+            '7-zip': 'downloads.html',
+            'file archiver': 'downloads.html'
+          };
+
+          let found = false;
+          for (const keyword in routes) {
+            if (query.includes(keyword)) {
+              window.location.href = routes[keyword];
+              found = true;
+              break;
+            }
+          }
+
+          if (!found) {
+            alert("No match found. Try a different keyword.");
+          }
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error loading navbar:', error);
+    });
+</script>
+
 
   <main>
     <!-- Featured Apps Section -->

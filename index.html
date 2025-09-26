@@ -8,13 +8,14 @@
 </head>
 <body>
   
-    <header>
-      <h1>Welcome to My Apps</h1>
-      <p>Free downloads for useful programs</p>
-    </header>
+  <header>
+    <h1>Welcome to My Apps</h1>
+    <p>Free downloads for useful programs</p>
+  </header>
 
-    <!-- Navigation Bar -->
-    <nav>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container"> <!-- ✅ Wrap nav items + search for layout control -->
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#chatbox">Chat</a></li>
@@ -24,50 +25,96 @@
         <li><a href="quizzes.html">🎯Quizzes</a></li>
         <li><a href="#Programmer">Programmer</a></li>
       </ul>
-    </nav>
 
-    <main>
-      <!-- Featured Apps Section -->
-      <section id="apps">
-        <h2>Featured Apps</h2>
-        <ul>
-          <li><a href="downloads/app1.zip" download>App 1 - Calculator Tool</a></li>
-          <li><a href="downloads/app2.zip" download>App 2 - File Organizer</a></li>
-          <li><a href="downloads/app3.zip" download>App 3 - Invoice Generator</a></li>
-          
-        </ul>
-      </section>
+      <!-- ✅ Search Bar -->
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search apps or sections..." />
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+  </nav>
 
-      <!-- GPT Chatbox Section -->
-      <section id="chatbox">
-        <h2>Ask Me Anything!</h2>
-        <div id="chat-container">
-          <div id="messages"></div>
-          <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Ask a question..." />
-            <button onclick="sendMessage()">Send</button>
-          </div>
+  <main>
+    <!-- Featured Apps Section -->
+    <section id="apps">
+      <h2>Featured Apps</h2>
+      <ul>
+        <li><a href="downloads/app1.zip" download>App 1 - Calculator Tool</a></li>
+        <li><a href="downloads/app2.zip" download>App 2 - File Organizer</a></li>
+        <li><a href="downloads/app3.zip" download>App 3 - Invoice Generator</a></li>
+      </ul>
+    </section>
+
+    <!-- GPT Chatbox Section -->
+    <section id="chatbox">
+      <h2>Ask Me Anything!</h2>
+      <div id="chat-container">
+        <div id="messages"></div>
+        <div class="chat-input">
+          <input type="text" id="user-input" placeholder="Ask a question..." />
+          <button onclick="sendMessage()">Send</button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- About Section -->
-      <section id="about">
-        <h2>About</h2>
-        <p>This site is a personal project where I share small, helpful apps for free. All software is built with love and is free for everyone to use and explore.</p>
-      </section>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About</h2>
+      <p>This site is a personal project where I share small, helpful apps for free. All software is built with love and is free for everyone to use and explore.</p>
+    </section>
 
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Have a suggestion or need help? <a href="mailto:your-email@example.com">Email me here</a>.</p>
-      </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Have a suggestion or need help? <a href="mailto:your-email@example.com">Email me here</a>.</p>
+    </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
-    </footer>
-  
-  
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
+
+  <!-- ✅ JavaScript to handle search -->
+  <script>
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const query = searchInput.value.toLowerCase().trim();
+
+      if (!query) return;
+
+      const routes = {
+        'chat': '#chatbox',
+        'contact': '#contact',
+        'about': '#about',
+        'quizzes': 'quizzes.html',
+        'quiz': 'quizzes.html',
+        'downloads': 'downloads.html',
+        'download': 'downloads.html',
+        'programmer': '#Programmer',
+        'home': '#home',
+        'calculator': 'downloads.html',
+        'organizer': 'downloads.html',
+        'invoice': 'downloads.html'
+      };
+
+      let found = false;
+      for (const keyword in routes) {
+        if (query.includes(keyword)) {
+          window.location.href = routes[keyword];
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        alert("No match found. Try a different keyword.");
+      }
+    });
+  </script>
+
   <script src="chat.js"></script>
 </body>
 </html>

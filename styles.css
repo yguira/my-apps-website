@@ -178,14 +178,38 @@ h2 {
   border: 1px solid #e5e7eb;
 }
 
-#contact a {
-  color: #1e40af;
-  text-decoration: none;
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.contact-section label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
 }
+
+.contact-section button.quiz-button {
+  background-color: #1e40af;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button.quiz-button:hover {
+  background-color: #374bd3;
+}
+
 
 /* Footer */
 footer {

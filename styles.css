@@ -426,3 +426,42 @@ footer {
   margin-top: 20px;
   color: #1e40af;
 }
+/* Mobile nav toggle styles */
+.hamburger {
+  background: none;
+  font-size: 28px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Make nav-links responsive */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #1e40af;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

@@ -105,6 +105,14 @@ function loadQuestion() {
   });
 
   startTimer();
+    // ✅ Scroll to quiz container on mobile
+  const quizContainer = document.getElementById("question-box");
+  if (quizContainer) {
+    setTimeout(() => {
+      quizContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100); // delay to ensure buttons render first
+  }
+
 }
 
 function checkAnswer(selected) {

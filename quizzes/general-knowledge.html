@@ -50,7 +50,7 @@
           let found = false;
           for (const keyword in routes) {
             if (query.includes(keyword)) {
-              window.location.href = routes[keyword];
+              window.location.href = location.pathname.includes('quizzes') ? '../' + routes[keyword] : routes[keyword];
               found = true;
               break;
             }

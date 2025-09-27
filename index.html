@@ -100,11 +100,53 @@
       <p>This site is a personal project where I share small, helpful apps for free. All software is built with love and is free for everyone to use and explore.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Have a suggestion or need help? <a href="mailto:your-email@example.com">Email me here</a>.</p>
-    </section>
+<!-- 📬 Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>📩 Contact Me</h2>
+  <p>If you have questions, feedback, or just want to say hello — drop me a message below.</p>
+
+  <form
+    action="https://formspree.io/f/xgvnonjg"
+    method="POST"
+    style="max-width: 500px; margin: 30px auto;"
+  >
+    <label for="name">Your Name:</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      required
+      placeholder="John Doe"
+    />
+
+    <label for="email">Your Email:</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      placeholder="you@example.com"
+    />
+
+    <label for="message">Your Message:</label>
+    <textarea
+      name="message"
+      id="message"
+      rows="5"
+      required
+      placeholder="Type your message here..."
+    ></textarea>
+
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <!-- Redirect to thank you page -->
+    <input type="hidden" name="_next" value="thankyou.html" />
+
+    <button type="submit" class="quiz-button">Send Message</button>
+  </form>
+</section>
+
   </main>
 
   <footer>

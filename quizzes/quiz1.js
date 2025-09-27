@@ -61,34 +61,14 @@ const questions = [
   }
 ];
 
-// DOM elements
+// DOM Elements
 const questionElem = document.getElementById("question");
 const choicesElem = document.getElementById("choices");
 const feedbackElem = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
 const scoreBox = document.getElementById("score-box");
 const questionBox = document.getElementById("question-box");
-
-// ✅ Create and insert progress bar container
-const progressContainer = document.createElement("div");
-progressContainer.id = "progress-container";
-progressContainer.style.height = "10px";
-progressContainer.style.width = "100%";
-progressContainer.style.backgroundColor = "#ddd";
-progressContainer.style.margin = "20px 0";
-
-const progressBar = document.createElement("div");
-progressBar.id = "progress-bar";
-progressBar.style.height = "100%";
-progressBar.style.width = "0%";
-progressBar.style.backgroundColor = "#4caf50";
-progressBar.style.transition = "width 0.3s ease";
-
-progressContainer.appendChild(progressBar);
-
-// Insert progress bar into quiz container
-const quizContainer = document.getElementById("quiz-container");
-quizContainer.insertBefore(progressContainer, questionBox);
+const progressBar = document.getElementById("progress-bar");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -99,12 +79,12 @@ let timeLeft = 10;
 function startQuiz() {
   score = 0;
   currentQuestionIndex = 0;
-  shuffledQuestions = shuffleArray([...questions]); // Copy & shuffle
+  shuffledQuestions = shuffleArray([...questions]);
   scoreBox.style.display = "none";
   nextBtn.textContent = "Next";
   nextBtn.style.display = "inline-block";
   questionBox.style.display = "block";
-  progressBar.style.width = "0%"; // ✅ Reset progress bar
+  progressBar.style.width = "0%";
   loadQuestion();
 }
 
@@ -118,7 +98,6 @@ function loadQuestion() {
   feedbackElem.textContent = "";
   nextBtn.disabled = true;
 
-  // ✅ Update progress bar
   const progressPercent = (currentQuestionIndex / shuffledQuestions.length) * 100;
   progressBar.style.width = `${progressPercent}%`;
 
@@ -163,10 +142,7 @@ function showScore() {
   questionBox.style.display = "none";
   nextBtn.style.display = "none";
   scoreBox.style.display = "block";
-
-  // ✅ Complete the progress bar
   progressBar.style.width = "100%";
-
   scoreBox.innerHTML = `
     <h2>🎉 Quiz Completed!</h2>
     <p>Your Score: ${score} / ${shuffledQuestions.length}</p>
@@ -199,5 +175,4 @@ function shuffleArray(array) {
   return array;
 }
 
-// Initialize
-startQuiz();
+// Start

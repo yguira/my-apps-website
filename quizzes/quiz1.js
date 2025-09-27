@@ -175,4 +175,5 @@ function shuffleArray(array) {
   return array;
 }
 
-// Start
+// ✅ Start the quiz when the script loads
+startQuiz();

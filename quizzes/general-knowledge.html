@@ -71,7 +71,14 @@
     
     <main>
       <section id="quiz-container">
+
+        <!-- Progress Bar -->
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+
         <!-- Quiz UI -->
+
         <div id="question-box">
           <h2 id="question">Question will appear here...</h2>
           <div id="choices"></div>
@@ -82,6 +89,18 @@
         <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
 
         <div id="score-box" style="display: none;"></div>
+        <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="question-box">
+    <h2 id="question">Question will appear here...</h2>
+    <div id="choices"></div>
+  </div>
+
+  <div id="feedback"></div>
+  <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+  <div id="score-box" style="display: none;"></div>
       </section>
     </main>
     <footer>

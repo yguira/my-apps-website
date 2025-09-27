@@ -182,18 +182,20 @@
   <script src="chat.js"></script>
 
   <script>
-  function toggleContactForm() {
-    const form = document.getElementById('contact-form');
-    const btn = event.target;
+function toggleContactForm() {
+  const form = document.getElementById('contact-form');
+  const btn = event.target;
 
-    if (form.style.display === 'none') {
-      form.style.display = 'block';
-      btn.textContent = '❌ Close Contact Form';
-    } else {
-      form.style.display = 'none';
-      btn.textContent = '📨 Open Contact Form';
-    }
+  form.classList.toggle('show');
+
+  if (form.classList.contains('show')) {
+    btn.textContent = '❌ Close Contact Form';
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    btn.textContent = '📨 Open Contact Form';
   }
+}
+
 </script>
 
 </body>

@@ -61,14 +61,13 @@ const questions = [
   }
 ];
 
-// DOM Elements
+// DOM elements
 const questionElem = document.getElementById("question");
 const choicesElem = document.getElementById("choices");
 const feedbackElem = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
 const scoreBox = document.getElementById("score-box");
 const questionBox = document.getElementById("question-box");
-const progressBar = document.getElementById("progress-bar");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -79,12 +78,11 @@ let timeLeft = 10;
 function startQuiz() {
   score = 0;
   currentQuestionIndex = 0;
-  shuffledQuestions = shuffleArray([...questions]);
+  shuffledQuestions = shuffleArray([...questions]); // Copy & shuffle
   scoreBox.style.display = "none";
   nextBtn.textContent = "Next";
   nextBtn.style.display = "inline-block";
   questionBox.style.display = "block";
-  progressBar.style.width = "0%";
   loadQuestion();
 }
 
@@ -97,9 +95,6 @@ function loadQuestion() {
   choicesElem.innerHTML = "";
   feedbackElem.textContent = "";
   nextBtn.disabled = true;
-
-  const progressPercent = (currentQuestionIndex / shuffledQuestions.length) * 100;
-  progressBar.style.width = `${progressPercent}%`;
 
   current.choices.forEach(choice => {
     const btn = document.createElement("button");
@@ -142,7 +137,6 @@ function showScore() {
   questionBox.style.display = "none";
   nextBtn.style.display = "none";
   scoreBox.style.display = "block";
-  progressBar.style.width = "100%";
   scoreBox.innerHTML = `
     <h2>🎉 Quiz Completed!</h2>
     <p>Your Score: ${score} / ${shuffledQuestions.length}</p>
@@ -175,5 +169,5 @@ function shuffleArray(array) {
   return array;
 }
 
-// ✅ Start the quiz when the script loads
+// Initialize
 startQuiz();

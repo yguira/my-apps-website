@@ -69,6 +69,27 @@ const nextBtn = document.getElementById("next-btn");
 const scoreBox = document.getElementById("score-box");
 const questionBox = document.getElementById("question-box");
 
+// ✅ Create and insert progress bar container
+const progressContainer = document.createElement("div");
+progressContainer.id = "progress-container";
+progressContainer.style.height = "10px";
+progressContainer.style.width = "100%";
+progressContainer.style.backgroundColor = "#ddd";
+progressContainer.style.margin = "20px 0";
+
+const progressBar = document.createElement("div");
+progressBar.id = "progress-bar";
+progressBar.style.height = "100%";
+progressBar.style.width = "0%";
+progressBar.style.backgroundColor = "#4caf50";
+progressBar.style.transition = "width 0.3s ease";
+
+progressContainer.appendChild(progressBar);
+
+// Insert progress bar into quiz container
+const quizContainer = document.getElementById("quiz-container");
+quizContainer.insertBefore(progressContainer, questionBox);
+
 let currentQuestionIndex = 0;
 let score = 0;
 let shuffledQuestions = [];
@@ -83,6 +104,7 @@ function startQuiz() {
   nextBtn.textContent = "Next";
   nextBtn.style.display = "inline-block";
   questionBox.style.display = "block";
+  progressBar.style.width = "0%"; // ✅ Reset progress bar
   loadQuestion();
 }
 
@@ -95,6 +117,10 @@ function loadQuestion() {
   choicesElem.innerHTML = "";
   feedbackElem.textContent = "";
   nextBtn.disabled = true;
+
+  // ✅ Update progress bar
+  const progressPercent = (currentQuestionIndex / shuffledQuestions.length) * 100;
+  progressBar.style.width = `${progressPercent}%`;
 
   current.choices.forEach(choice => {
     const btn = document.createElement("button");
@@ -137,6 +163,10 @@ function showScore() {
   questionBox.style.display = "none";
   nextBtn.style.display = "none";
   scoreBox.style.display = "block";
+
+  // ✅ Complete the progress bar
+  progressBar.style.width = "100%";
+
   scoreBox.innerHTML = `
     <h2>🎉 Quiz Completed!</h2>
     <p>Your Score: ${score} / ${shuffledQuestions.length}</p>

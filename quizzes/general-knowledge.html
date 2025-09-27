@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-
   <header>
     <h1>🧠 General Knowledge Quiz</h1>
   </header>
@@ -21,6 +20,7 @@
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
 
+        // Search form functionality
         const searchForm = document.getElementById('search-form');
         const searchInput = document.getElementById('search-input');
 
@@ -70,26 +70,22 @@
   <main>
     <section id="quiz-container">
 
-      <!-- ✅ Single Progress Bar -->
+      <!-- ✅ Progress Bar -->
       <div id="progress-container">
         <div id="progress-bar"></div>
       </div>
 
-      <!-- ✅ Single Question Box -->
+      <!-- ✅ Quiz UI -->
       <div id="question-box">
         <h2 id="question">Question will appear here...</h2>
         <div id="choices"></div>
       </div>
 
-      <!-- ✅ Single Feedback Section -->
       <div id="feedback"></div>
 
-      <!-- ✅ Single Next Button -->
       <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
 
-      <!-- ✅ Single Score Box -->
       <div id="score-box" style="display: none;"></div>
-
     </section>
   </main>
 

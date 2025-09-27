@@ -399,3 +399,16 @@ footer {
   opacity: 1;
   max-height: 800px; /* enough for the full form */
 }
+#about p {
+  margin-bottom: 16px;
+  font-size: 1.05em;
+}
+
+#about a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+#about a:hover {
+  color: #2563eb;
+}

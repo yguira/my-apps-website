@@ -412,3 +412,17 @@ footer {
 #about a:hover {
   color: #2563eb;
 }
+#Programmer ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: square;
+}
+
+#Programmer li {
+  margin-bottom: 8px;
+}
+
+#Programmer h3 {
+  margin-top: 20px;
+  color: #1e40af;
+}

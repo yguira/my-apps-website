@@ -16,7 +16,7 @@
   <!-- Navbar placeholder -->
   <div id="navbar"></div>
 
-  <!-- Load navbar.html and search functionality -->
+  <!-- Navbar loader and search -->
   <script>
     fetch('../navbar.html')
       .then(response => response.text())
@@ -73,23 +73,24 @@
   <main>
     <section id="quiz-container">
 
-      <!-- ✅ Only ONE progress bar -->
+      <!-- ✅ Single Progress Bar -->
       <div id="progress-container">
         <div id="progress-bar"></div>
       </div>
 
-      <!-- ✅ Quiz UI -->
+      <!-- ✅ Single Question Box -->
       <div id="question-box">
         <h2 id="question">Question will appear here...</h2>
         <div id="choices"></div>
       </div>
 
+      <!-- ✅ Single Feedback Display -->
       <div id="feedback"></div>
 
-      <!-- ✅ Only ONE "Next" button -->
+      <!-- ✅ Single Next Button -->
       <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
 
-      <!-- ✅ Score box -->
+      <!-- ✅ Single Score Box -->
       <div id="score-box" style="display: none;"></div>
 
     </section>
@@ -100,7 +101,7 @@
     <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
   </footer>
 
-  <!-- Quiz Script -->
+  <!-- JavaScript -->
   <script src="quiz1.js"></script>
 </body>
 </html>

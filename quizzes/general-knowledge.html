@@ -7,74 +7,89 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header>
-    <h1>🧠 General Knowledge Quiz</h1>
-  </header>
-  <!-- Navbar placeholder -->
-  <div id="navbar"></div>
-  <script>
-    fetch('../navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
+  
+    <header>
+      <h1>🧠 General Knowledge Quiz</h1>
+    </header>
 
-        // Add search form functionality after navbar loads
-        const searchForm = document.getElementById('search-form');
-        const searchInput = document.getElementById('search-input');
-        if (searchForm && searchInput) {
-          searchForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const query = searchInput.value.toLowerCase().trim();
-            const routes = {
-              'chat': 'index.html#chatbox',
-              'contact': 'index.html#contact',
-              'about': 'index.html#about',
-              'quizzes': 'quizzes.html',
-              'quiz': 'quizzes.html',
-              'downloads': 'downloads.html',
-              'download': 'downloads.html',
-              'programmer': 'index.html#Programmer',
-              'home': 'index.html#home',
-              'vlc': 'downloads.html',
-              'vlc media player': 'downloads.html',
-              'media player': 'downloads.html',
-              '7zip': 'downloads.html',
-              '7-zip': 'downloads.html',
-              'file archiver': 'downloads.html'
-            };
-            let found = false;
-            for (const keyword in routes) {
-              if (query.includes(keyword)) {
-                window.location.href = routes[keyword];
-                found = true;
-                break;
-              }
+  <!-- Navbar placeholder -->
+<div id="navbar"></div>
+
+<script>
+  fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+
+      // Add search form functionality after navbar loads
+      const searchForm = document.getElementById('search-form');
+      const searchInput = document.getElementById('search-input');
+
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const query = searchInput.value.toLowerCase().trim();
+
+          const routes = {
+            'chat': 'index.html#chatbox',
+            'contact': 'index.html#contact',
+            'about': 'index.html#about',
+            'quizzes': 'quizzes.html',
+            'quiz': 'quizzes.html',
+            'downloads': 'downloads.html',
+            'download': 'downloads.html',
+            'programmer': 'index.html#Programmer',
+            'home': 'index.html#home',
+            'vlc': 'downloads.html',
+            'vlc media player': 'downloads.html',
+            'media player': 'downloads.html',
+            '7zip': 'downloads.html',
+            '7-zip': 'downloads.html',
+            'file archiver': 'downloads.html'
+          };
+
+          let found = false;
+          for (const keyword in routes) {
+            if (query.includes(keyword)) {
+              window.location.href = routes[keyword];
+              found = true;
+              break;
             }
-            if (!found) {
-              alert("No match found. Try a different keyword.");
-            }
-          });
-        }
-      })
-      .catch(error => {
-        console.error('Error loading navbar:', error);
-      });
-  </script>
-  <main>
-    <section id="quiz-container">
-      <!-- Quiz UI -->
-      <div id="question-box">
-        <h2 id="question">Question will appear here...</h2>
-        <div id="choices"></div>
-      </div>
-      <div id="feedback"></div>
-      <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
-      <div id="score-box" style="display: none;"></div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
-  </footer>
+          }
+
+          if (!found) {
+            alert("No match found. Try a different keyword.");
+          }
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error loading navbar:', error);
+    });
+</script>
+
+    
+    <main>
+      <section id="quiz-container">
+        <!-- Quiz UI -->
+        <div id="question-box">
+          <h2 id="question">Question will appear here...</h2>
+          <div id="choices"></div>
+        </div>
+
+        <div id="feedback"></div>
+
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+
+        <div id="score-box" style="display: none;"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+    </footer>
+  
+
+
   <script src="quiz1.js"></script>
 </body>
 </html>

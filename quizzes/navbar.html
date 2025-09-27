@@ -24,3 +24,21 @@
     </form>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+
+    // Optional: hide menu when a link is clicked (for mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  });
+</script>

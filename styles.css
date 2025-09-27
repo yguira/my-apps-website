@@ -385,3 +385,18 @@ footer {
 #contact-form {
   display: none;
 }
+/* Animation for sliding open the contact form */
+#contact-form {
+  display: none;         /* initial state */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+/* When visible, add this class dynamically via JS */
+#contact-form.show {
+  display: block;
+  opacity: 1;
+  max-height: 1000px; /* arbitrary large value */
+}

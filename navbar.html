@@ -1,15 +1,15 @@
 <!-- navbar.html -->
 <nav>
   <div class="nav-container">
+    <!-- Logo -->
     <div class="logo" style="color: white; font-weight: bold; font-size: 1.4em;">My Apps</div>
 
-    <!-- Hamburger menu icon (only visible on mobile) -->
+    <!-- Hamburger Icon -->
     <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</button>
 
-    <!-- ✅ WRAPPED this in a div with ID for toggle functionality -->
-    <div id="nav-links" class="nav-links" style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 10px 0; background-color: #1e40af; width: 100%;">
-      
-      <ul style="list-style:none; display:flex; flex-wrap: wrap; gap: 30px; margin:0; padding:0;">
+    <!-- Navigation Links + Search -->
+    <div id="nav-links" class="nav-links">
+      <ul style="display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 0;">
         <li><a href="index.html#home" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Home</a></li>
         <li><a href="index.html#chatbox" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Chat</a></li>
         <li><a href="index.html#about" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">About</a></li>
@@ -19,31 +19,29 @@
         <li><a href="index.html#Programmer" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Programmer</a></li>
       </ul>
 
-      <!-- 🔍 Search bar -->
+      <!-- Search Form -->
       <form id="search-form" style="margin-left: auto; display: flex; gap: 5px; flex-wrap: wrap;">
-        <input type="text" id="search-input" placeholder="Search apps or sections..." style="padding: 6px 10px; border-radius: 4px; border: none; font-size: 16px;" />
-        <button type="submit" style="background-color: #3b82f6; color: white; border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer;">🔍</button>
+        <input type="text" id="search-input" placeholder="Search apps or sections..." />
+        <button type="submit">🔍</button>
       </form>
     </div>
   </div>
 </nav>
 
-<!-- ✅ JavaScript to toggle mobile nav -->
+<!-- Mobile Menu Toggle Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggleBtn = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    if (toggleBtn && navLinks) {
-      toggleBtn.addEventListener('click', function () {
-        navLinks.classList.toggle('show');
-      });
+    toggleBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
 
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('show');
-        });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
       });
-    }
+    });
   });
 </script>

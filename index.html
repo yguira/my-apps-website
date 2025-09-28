@@ -261,5 +261,25 @@ function toggleContactForm() {
 
 </script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (toggleBtn && navLinks) {
+      toggleBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+        });
+      });
+    }
+  });
+</script>
+
+
 </body>
 </html>

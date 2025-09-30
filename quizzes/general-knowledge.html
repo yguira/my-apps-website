@@ -21,7 +21,7 @@
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
 
-      // Reattach search logic if you use it:
+      // --- Enable search form functionality ---
       const searchForm = document.getElementById('search-form');
       const searchInput = document.getElementById('search-input');
 
@@ -29,28 +29,29 @@
         searchForm.addEventListener('submit', function (e) {
           e.preventDefault();
           const query = searchInput.value.toLowerCase().trim();
+
           const routes = {
-            'chat': '/index.html#chatbox',
-            'contact': '/index.html#contact',
-            'about': '/index.html#about',
-            'quizzes': '/quizzes.html',
-            'quiz': '/quizzes.html',
-            'downloads': '/downloads.html',
-            'download': '/downloads.html',
-            'programmer': '/index.html#Programmer',
-            'home': '/index.html#home',
-            'vlc': '/downloads.html',
-            'vlc media player': '/downloads.html',
-            'media player': '/downloads.html',
-            '7zip': '/downloads.html',
-            '7-zip': '/downloads.html',
-            'file archiver': '/downloads.html'
+            'chat': 'index.html#chatbox',
+            'contact': 'index.html#contact',
+            'about': 'index.html#about',
+            'quizzes': 'quizzes.html',
+            'quiz': 'quizzes.html',
+            'downloads': 'downloads.html',
+            'download': 'downloads.html',
+            'programmer': 'index.html#Programmer',
+            'home': 'index.html#home',
+            'vlc': 'downloads.html',
+            'vlc media player': 'downloads.html',
+            'media player': 'downloads.html',
+            '7zip': 'downloads.html',
+            '7-zip': 'downloads.html',
+            'file archiver': 'downloads.html'
           };
 
           let found = false;
           for (const keyword in routes) {
             if (query.includes(keyword)) {
-              window.location.href = location.pathname.includes('quizzes') ? '../' + routes[keyword] : routes[keyword];
+              window.location.href = routes[keyword];
               found = true;
               break;
             }
@@ -61,11 +62,28 @@
           }
         });
       }
+
+      // --- Add hamburger toggle functionality ---
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+          });
+        });
+      }
     })
     .catch(error => {
       console.error('Error loading navbar:', error);
     });
 </script>
+
 
 
     

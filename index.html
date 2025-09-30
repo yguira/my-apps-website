@@ -23,7 +23,7 @@
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
 
-      // Add search form functionality after navbar loads
+      // --- Enable search form functionality ---
       const searchForm = document.getElementById('search-form');
       const searchInput = document.getElementById('search-input');
 
@@ -64,11 +64,28 @@
           }
         });
       }
+
+      // --- Hamburger toggle functionality ---
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+          });
+        });
+      }
     })
     .catch(error => {
       console.error('Error loading navbar:', error);
     });
 </script>
+
 
 
   <main>

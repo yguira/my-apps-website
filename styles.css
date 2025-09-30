@@ -448,6 +448,10 @@ footer {
     display: block;
   }
 
+  .hamburger {
+    cursor: pointer;
+  }
+
   .nav-links {
     flex-direction: column;
     width: 100%;

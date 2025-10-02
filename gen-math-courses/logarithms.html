@@ -3,25 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logarithms</title>
+  <title>Logarithms | General Math Courses</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  
-    <header>
-      <h1>What are Logarithmic Functions?</h1>
-      <h1>=======>Let's find out<========</h1>
-    </header>
 
-  <!-- Navbar placeholder -->
-<div id="navbar"></div>
+  <header>
+    <h1>🔢 Understanding Logarithms</h1>
+    <p>Learn how logarithms work, how they relate to exponents, and how they're used in real-world problems.</p>
+  </header>
 
+  <div id="navbar"></div>
 
-    
-    <main>
-      
-  <script src="navbar-fix.js"></script>
+  <main>
+    <section>
+      <h2>📌 What is a Logarithm?</h2>
+      <p>A <strong>logarithm</strong> answers the question: <em>"To what power must I raise a base number to get another number?"</em></p>
+      <p><strong>Logarithmic form:</strong> <code>log<sub>b</sub>(x) = y</code> means <code>b<sup>y</sup> = x</code></p>
+      <p><strong>Example:</strong> <code>log<sub>2</sub>(8) = 3</code> because <code>2³ = 8</code></p>
+    </section>
 
- 
+    <section>
+      <h2>🔁 Relationship with Exponents</h2>
+      <p>Logarithms are the inverse of exponents. This means they "undo" each other:</p>
+      <ul>
+        <li><code>log<sub>10</sub>(1000) = 3</code> ← exponent form: <code>10³ = 1000</code></li>
+        <li><code>log<sub>5</sub>(25) = 2</code> ← exponent form: <code>5² = 25</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Common Types of Logarithms</h2>
+      <ul>
+        <li><strong>Common Logarithm (Base 10):</strong> <code>log(x)</code> — Default in calculators</li>
+        <li><strong>Natural Logarithm (Base e ≈ 2.718):</strong> <code>ln(x)</code> — Used in calculus, growth models</li>
+        <li><strong>Binary Logarithm (Base 2):</strong> <code>log<sub>2</sub>(x)</code> — Used in computer science</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📐 Properties and Rules of Logarithms</h2>
+      <p>These rules make it easier to work with logarithmic expressions:</p>
+
+      <ul>
+        <li><strong>1. Product Rule:</strong> <code>log<sub>b</sub>(xy) = log<sub>b</sub>(x) + log<sub>b</sub>(y)</code></li>
+        <li><strong>2. Quotient Rule:</strong> <code>log<sub>b</sub>(x/y) = log<sub>b</sub>(x) - log<sub>b</sub>(y)</code></li>
+        <li><strong>3. Power Rule:</strong> <code>log<sub>b</sub>(xⁿ) = n × log<sub>b</sub>(x)</code></li>
+        <li><strong>4. Change of Base Formula:</strong>  
+          <code>log<sub>b</sub>(x) = log<sub>k</sub>(x) / log<sub>k</sub>(b)</code>  
+          (commonly rewritten using base 10 or base e)
+        </li>
+      </ul>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><code>log<sub>2</sub>(32) = log<sub>2</sub>(2⁵) = 5</code></li>
+        <li><code>log<sub>3</sub>(81) = log<sub>3</sub>(3⁴) = 4</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Graphing Logarithmic Functions</h2>
+      <p>The basic logarithmic graph has the form <code>y = log<sub>b</sub>(x)</code>.</p>
+      <ul>
+        <li>It passes through (1, 0) — because <code>log<sub>b</sub>(1) = 0</code></li>
+        <li>Increases slowly for large x</li>
+        <li>Never touches the y-axis (asymptote at x = 0)</li>
+      </ul>
+      <p>As the base increases, the graph becomes flatter.</p>
+    </section>
+
+    <section>
+      <h2>🌍 Applications of Logarithms</h2>
+      <ul>
+        <li><strong>Data Science:</strong> Log transforms for skewed data</li>
+        <li><strong>Computer Science:</strong> Algorithmic complexity like <code>O(log n)</code></li>
+        <li><strong>Finance:</strong> Continuous compounding: <code>A = Pe<sup>rt</sup></code></li>
+        <li><strong>Science:</strong> pH level (<code>-log[H⁺]</code>), sound (decibels), Richter scale (earthquakes)</li>
+        <li><strong>Information Theory:</strong> Entropy uses log base 2</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Practice Questions</h2>
+      <ul>
+        <li>Evaluate: <code>log<sub>2</sub>(16)</code></li>
+        <li>Simplify: <code>log<sub>10</sub>(100) + log<sub>10</sub>(1000)</code></li>
+        <li>Use the power rule: <code>log<sub>3</sub>(x⁴)</code></li>
+        <li>Convert to exponential form: <code>log<sub>4</sub>(64) = 3</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Learn More</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/math/algebra/logarithms" target="_blank">Khan Academy – Logarithms</a></li>
+        <li><a href="https://www.desmos.com/calculator" target="_blank">Desmos Graphing Calculator</a></li>
+        <li><a href="https://www.mathsisfun.com/algebra/logarithms.html" target="_blank">Math is Fun – Logs</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔙 Back to General Math</h2>
+      <p><a href="./general-math.html">← Return to General Math Topics</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
+
+  <script src="../navbar-fix.js"></script>
 </body>
 </html>

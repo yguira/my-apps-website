@@ -64,6 +64,10 @@
       text-align: center;
       margin-bottom: 30px;
     }
+
+    .content p {
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -90,14 +94,68 @@
         </ul>
       </div>
 
+      <!-- 📈 Updated Statistics Section -->
       <button class="collapsible">➕ 📈 Statistics</button>
       <div class="content">
-        <ul>
-          <li>Descriptive Statistics – Mean, Median, Mode</li>
-          <li>Distributions – Normal, Binomial</li>
-          <li>Hypothesis Testing – t-test, p-values</li>
-          <li>Confidence Intervals & Sampling</li>
-        </ul>
+
+        <button class="collapsible">➕ Mean (Average)</button>
+        <div class="content">
+          <p><strong>Definition:</strong> The mean is the sum of all values divided by the number of values.</p>
+          <p><strong>Formula:</strong> Mean = (Σx) / n</p>
+          <p><strong>Example:</strong> (4 + 6 + 8) / 3 = 6</p>
+        </div>
+
+        <button class="collapsible">➕ Median</button>
+        <div class="content">
+          <p><strong>Definition:</strong> The median is the middle value in an ordered dataset.</p>
+          <p><strong>Example:</strong> For [2, 4, 6], the median is 4. For [1, 3, 5, 7], it's (3 + 5)/2 = 4</p>
+        </div>
+
+        <button class="collapsible">➕ Mode</button>
+        <div class="content">
+          <p><strong>Definition:</strong> The mode is the value that appears most frequently in a dataset.</p>
+          <p><strong>Example:</strong> [1, 2, 2, 3] → Mode = 2</p>
+        </div>
+
+        <button class="collapsible">➕ Variance</button>
+        <div class="content">
+          <p><strong>Definition:</strong> Measures how far data points are from the mean.</p>
+          <p><strong>Formula:</strong> σ² = Σ(x - μ)² / n</p>
+        </div>
+
+        <button class="collapsible">➕ Standard Deviation</button>
+        <div class="content">
+          <p><strong>Definition:</strong> The square root of the variance. Indicates data spread.</p>
+          <p><strong>Formula:</strong> σ = √[Σ(x - μ)² / n]</p>
+        </div>
+
+        <button class="collapsible">➕ Z-score</button>
+        <div class="content">
+          <p><strong>Definition:</strong> Indicates how many standard deviations a value is from the mean.</p>
+          <p><strong>Formula:</strong> Z = (x - μ) / σ</p>
+        </div>
+
+        <button class="collapsible">➕ p-value</button>
+        <div class="content">
+          <p><strong>Definition:</strong> Probability that observed results are due to chance under null hypothesis.</p>
+          <p><strong>Interpretation:</strong> A p-value &lt; 0.05 typically means statistical significance.</p>
+        </div>
+
+        <button class="collapsible">➕ Confidence Interval</button>
+        <div class="content">
+          <p><strong>Definition:</strong> A range of values likely to contain a population parameter with a certain confidence level (e.g., 95%).</p>
+        </div>
+
+        <button class="collapsible">➕ Normal Distribution</button>
+        <div class="content">
+          <p><strong>Definition:</strong> A bell-shaped, symmetric distribution centered at the mean.</p>
+        </div>
+
+        <button class="collapsible">➕ Hypothesis Testing</button>
+        <div class="content">
+          <p><strong>Definition:</strong> A method to test if there is enough evidence to reject a hypothesis about a population.</p>
+        </div>
+
       </div>
 
       <button class="collapsible">➕ 🔍 Data Analytics</button>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📊 Data Science & Analytics Resources</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .collapsible {
+      background-color: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s;
+      margin: 10px 0;
+    }
+
+    .collapsible:hover {
+      background-color: #ddd;
+    }
+
+    .content {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #fafafa;
+      border-left: 3px solid #007acc;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    .floating-button {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      background-color: #007acc;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .floating-button:hover {
+      background-color: #005fa3;
+    }
+
+    .content ul {
+      margin: 15px 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar placeholder -->
+  <div id="navbar"></div>
+
+  <!-- Floating dataset button -->
+  <a class="floating-button" href="datasets.html">📁 Free Datasets</a>
+
+  <main>
+    <section>
+      <h1>📊 Data Science & Analytics Resources</h1>
+      <p style="text-align:center;">Explore foundational and advanced topics to boost your data journey.</p>
+
+      <!-- Collapsible Sections -->
+      <button class="collapsible">➕ 🧮 General Math</button>
+      <div class="content">
+        <ul>
+          <li>Algebra – Equations, Functions</li>
+          <li>Linear Algebra – Matrices, Vectors</li>
+          <li>Calculus – Derivatives, Integrals</li>
+          <li>Probability – Sets, Combinations, Permutations</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 📈 Statistics</button>
+      <div class="content">
+        <ul>
+          <li>Descriptive Statistics – Mean, Median, Mode</li>
+          <li>Distributions – Normal, Binomial</li>
+          <li>Hypothesis Testing – t-test, p-values</li>
+          <li>Confidence Intervals & Sampling</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 🔍 Data Analytics</button>
+      <div class="content">
+        <ul>
+          <li>Data Cleaning – Handling nulls, duplicates</li>
+          <li>EDA – Summary stats, visual patterns</li>
+          <li>SQL Queries & Joins</li>
+          <li>Business Intelligence Concepts</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 🧠 Machine Learning</button>
+      <div class="content">
+        <ul>
+          <li>Supervised vs Unsupervised Learning</li>
+          <li>Classification – Logistic Regression, Decision Trees</li>
+          <li>Clustering – K-means</li>
+          <li>Model Evaluation – Accuracy, Confusion Matrix</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 📊 Data Visualization</button>
+      <div class="content">
+        <ul>
+          <li>Bar, Line, Scatter, Pie Charts</li>
+          <li>Histograms & Boxplots</li>
+          <li>Dashboards – Power BI / Tableau</li>
+          <li>Plotting Libraries – Matplotlib, Seaborn</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 🧰 Tools & Software</button>
+      <div class="content">
+        <ul>
+          <li>Python – Pandas, NumPy, Scikit-learn</li>
+          <li>R Language – Tidyverse, ggplot2</li>
+          <li>Excel – Pivot Tables, Formulas</li>
+          <li>Power BI, Tableau</li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 🎓 Learning Platforms</button>
+      <div class="content">
+        <ul>
+          <li><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a></li>
+          <li><a href="https://www.datacamp.com" target="_blank">DataCamp</a></li>
+          <li><a href="https://www.codecademy.com/learn/data-science" target="_blank">Codecademy</a></li>
+          <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+        </ul>
+      </div>
+
+      <button class="collapsible">➕ 📚 Books & References</button>
+      <div class="content">
+        <ul>
+          <li>"Practical Statistics for Data Scientists" by Peter Bruce</li>
+          <li>"Python for Data Analysis" by Wes McKinney</li>
+          <li>"An Introduction to Statistical Learning"</li>
+          <li>"Naked Statistics" by Charles Wheelan</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const coll = document.querySelectorAll(".collapsible");
+      coll.forEach(button => {
+        button.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const content = this.nextElementSibling;
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

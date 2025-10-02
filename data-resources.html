@@ -212,33 +212,34 @@
   </footer>
 
   <!-- Scripts -->
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Main collapsible toggles
+    const coll = document.querySelectorAll(".collapsible");
+    coll.forEach(button => {
+      button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";  transition too if needed
       });
+    });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const coll = document.querySelectorAll(".collapsible");
-  coll.forEach(button => {
-    button.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const content = this.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
+    const subColl = document.querySelectorAll(".sub-collapsible");
+    subColl.forEach(button => {
+      button.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.classList.toggle("active"); 
+      });
     });
   });
+</script>
 
-  const subColl = document.querySelectorAll(".sub-collapsible");
-  subColl.forEach(button => {
-    button.addEventListener("click", function () {
-      const content = this.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    });
-  });
-});
-
-  </script>
 
 </body>
 </html>

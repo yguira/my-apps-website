@@ -3,25 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculus</title>
+  <title>Calculus | General Math Courses</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  
-    <header>
-      <h1>Welcome to Calculus</h1>
-    </header>
 
-  <!-- Navbar placeholder -->
-<div id="navbar"></div>
+  <header>
+    <h1>📘 Learn Calculus</h1>
+    <p>A beginner-friendly yet deep dive into the world of Calculus — limits, derivatives, integrals, and more.</p>
+  </header>
 
+  <div id="navbar"></div>
 
-    
-    <main>
-      
-  <script src="navbar-fix.js"></script>
+  <main>
+    <section>
+      <h2>🧮 What is Calculus?</h2>
+      <p>
+        Calculus is a branch of mathematics focused on how things change. It helps us analyze motion, growth, areas, and more — from planetary orbits to machine learning.
+      </p>
+      <p>
+        It’s divided into two main parts: <strong>Differential Calculus</strong> (concerned with rates of change) and <strong>Integral Calculus</strong> (concerned with accumulation and area under curves).
+      </p>
+    </section>
 
- 
+    <section>
+      <h2>🔗 Limits & Continuity</h2>
+      <p><strong>Limits</strong> are the foundation of Calculus. They help us understand what a function is approaching at a certain point.</p>
+      <p><strong>Continuity</strong> means there are no breaks, jumps, or holes in the graph of a function.</p>
+      <p><em>Example:</em> <code>lim(x→2) (x² - 4)/(x - 2)</code> simplifies to 4 using limit rules.</p>
+    </section>
+
+    <section>
+      <h2>📉 Derivatives</h2>
+      <p>
+        A <strong>derivative</strong> tells you how fast something is changing at any point. It's like the speedometer of math.
+      </p>
+
+      <h3>🧾 Definition</h3>
+      <p>The derivative of a function f(x) at a point x is:</p>
+      <pre><code>f'(x) = lim(h→0) [f(x + h) - f(x)] / h</code></pre>
+
+      <h3>📚 Common Derivative Rules</h3>
+      <ul>
+        <li><strong>Power Rule:</strong> d/dx [xⁿ] = n·xⁿ⁻¹</li>
+        <li><strong>Constant Rule:</strong> d/dx [c] = 0</li>
+        <li><strong>Sum Rule:</strong> d/dx [f(x) + g(x)] = f'(x) + g'(x)</li>
+        <li><strong>Product Rule:</strong> d/dx [uv] = u'v + uv'</li>
+        <li><strong>Quotient Rule:</strong> d/dx [u/v] = (u'v - uv') / v²</li>
+        <li><strong>Chain Rule:</strong> d/dx [f(g(x))] = f'(g(x)) · g'(x)</li>
+      </ul>
+
+      <h3>🧪 Examples</h3>
+      <ul>
+        <li>d/dx [x²] = 2x</li>
+        <li>d/dx [3x³ + 2x] = 9x² + 2</li>
+        <li>d/dx [sin(x)] = cos(x)</li>
+        <li>d/dx [ln(x)] = 1/x</li>
+      </ul>
+
+      <h3>🛠 Applications of Derivatives</h3>
+      <ul>
+        <li>Finding maximum or minimum values</li>
+        <li>Understanding acceleration, speed</li>
+        <li>Optimizing functions in economics or science</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧮 Integrals</h2>
+      <p>
+        An <strong>integral</strong> helps you calculate area under a curve, total distance, or total accumulation.
+      </p>
+
+      <h3>🧾 Definitions</h3>
+      <ul>
+        <li><strong>Indefinite Integral:</strong> ∫f(x) dx — represents a family of functions (includes "+ C")</li>
+        <li><strong>Definite Integral:</strong> ∫<sub>a</sub><sup>b</sup> f(x) dx — gives a number (area between a and b)</li>
+      </ul>
+
+      <h3>📚 Common Rules</h3>
+      <ul>
+        <li>∫xⁿ dx = (xⁿ⁺¹)/(n+1) + C, for n ≠ -1</li>
+        <li>∫1/x dx = ln|x| + C</li>
+        <li>∫eˣ dx = eˣ + C</li>
+        <li>∫cos(x) dx = sin(x) + C</li>
+      </ul>
+
+      <h3>🛠 Techniques</h3>
+      <ul>
+        <li>U-Substitution</li>
+        <li>Integration by Parts</li>
+        <li>Partial Fractions</li>
+      </ul>
+
+      <h3>🧪 Applications</h3>
+      <ul>
+        <li>Finding area under a curve</li>
+        <li>Calculating total accumulation of quantities</li>
+        <li>Physics: Work, energy, and motion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Fundamental Theorem of Calculus</h2>
+      <p>This connects derivatives and integrals:</p>
+      <p><strong>If F is the antiderivative of f, then:</strong></p>
+      <pre><code>∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) - F(a)</code></pre>
+    </section>
+
+    <section>
+      <h2>📚 More Advanced Topics</h2>
+      <ul>
+        <li><strong>Implicit Differentiation</strong> – When functions are not explicitly solved for y</li>
+        <li><strong>Differential Equations</strong> – Equations involving derivatives</li>
+        <li><strong>Parametric & Polar Coordinates</strong></li>
+        <li><strong>Series and Sequences (Calculus II)</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Additional Learning Resources</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/math/calculus-1" target="_blank">Khan Academy – Calculus 1</a></li>
+        <li><a href="https://tutorial.math.lamar.edu/" target="_blank">Paul’s Online Math Notes</a></li>
+        <li><a href="https://www.coursera.org/learn/calculus1" target="_blank">Coursera – Calculus</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
+
+  <script src="../navbar-fix.js"></script>
+
 </body>
 </html>
-

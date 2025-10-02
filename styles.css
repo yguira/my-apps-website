@@ -15,6 +15,7 @@ body {
   color: #1f2937;
   line-height: 1.6;
   position: relative;
+  padding-top: 60px;
 }
 
 .overlay {

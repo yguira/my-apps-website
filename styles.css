@@ -70,6 +70,15 @@ nav ul li a:hover {
   color: white;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: top 0.3s ease;
+}
+
 /* Main content */
 main {
   padding: 40px 20px;
@@ -468,4 +477,8 @@ footer {
     text-align: center;
     padding: 10px 0;
   }
+}
+
+main {
+  margin-top: 80px; 
 }

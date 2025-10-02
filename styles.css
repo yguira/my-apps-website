@@ -483,27 +483,18 @@ footer {
 main {
   margin-top: 60px; 
 }
-.sub-collapsible {
-  background: none;
-  color: #007acc;
-  border: none;
-  text-align: left;
-  padding: 8px 0;
-  cursor: pointer;
-  font-size: 1em;
-  text-decoration: underline;
-  display: block;
-  width: 100%;
-}
-
-.sub-collapsible:hover {
-  color: #005fa3;
-}
-
 .sub-content {
-  display: none;
-  padding: 0 15px 10px 15px;
+  max-height: 0;                /* Collapsed */
+  overflow: hidden;             /* Hide overflow when collapsed */
+  padding: 0 15px 0 15px;       /* Start with no vertical padding */
   border-left: 2px solid #007acc;
   margin-bottom: 10px;
   background: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
+
+.sub-content.active {
+  max-height: 500px;            /* Enough height to reveal content */
+  padding: 10px 15px 10px 15px; /* Add vertical padding when expanded */
+}
+

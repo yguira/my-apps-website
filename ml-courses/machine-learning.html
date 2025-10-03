@@ -1,0 +1,130 @@
+<!-- File: ml-courses/machine-learning.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Machine Learning Guide</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 Mastering Machine Learning</h1>
+    <p>From Concepts to Code – A Full Beginner's Guide</p>
+  </header>
+
+  <div id="navbar"></div>
+
+  <main>
+    <section>
+      <h2>🔍 What is Machine Learning?</h2>
+      <p>Machine Learning is a branch of artificial intelligence (AI) that allows computers to learn patterns from data and make decisions without being explicitly programmed.</p>
+
+      <p>It's everywhere — from Netflix recommendations to spam filtering, fraud detection, and even self-driving cars!</p>
+    </section>
+
+    <section>
+      <h2>📚 Types of Machine Learning</h2>
+      <ul>
+        <li><strong>Supervised Learning:</strong> Model is trained on labeled data (e.g., predicting house prices).</li>
+        <li><strong>Unsupervised Learning:</strong> Model finds hidden patterns in unlabeled data (e.g., customer segmentation).</li>
+        <li><strong>Semi-supervised Learning:</strong> Mix of labeled and unlabeled data.</li>
+        <li><strong>Reinforcement Learning:</strong> An agent learns by interacting with an environment and receiving rewards (used in games, robotics).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔢 Basic Math Behind ML</h2>
+      <p>Every ML algorithm uses math to make decisions. Here are a few key concepts:</p>
+
+      <h3>1. Linear Regression</h3>
+      <pre>y = w₀ + w₁x₁ + w₂x₂ + ... + wₙxₙ</pre>
+      <p>Used for prediction of continuous values. The model minimizes <strong>Mean Squared Error (MSE)</strong>.</p>
+
+      <h3>2. Logistic Regression</h3>
+      <pre>ŷ = 1 / (1 + e^-z)</pre>
+      <p>Used for binary classification. Output is a probability between 0 and 1.</p>
+
+      <h3>3. Loss Functions</h3>
+      <ul>
+        <li><strong>MSE:</strong> Regression</li>
+        <li><strong>Log Loss:</strong> Classification</li>
+        <li><strong>Cross Entropy:</strong> Multi-class classification</li>
+      </ul>
+
+      <h3>4. Gradient Descent</h3>
+      <pre>w = w - α * ∇Loss(w)</pre>
+      <p>The model learns by adjusting weights to minimize loss.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Popular Algorithms</h2>
+      <ul>
+        <li><strong>Linear Regression</strong></li>
+        <li><strong>Logistic Regression</strong></li>
+        <li><strong>Decision Trees</strong></li>
+        <li><strong>Random Forests</strong></li>
+        <li><strong>Support Vector Machines (SVM)</strong></li>
+        <li><strong>K-Nearest Neighbors (KNN)</strong></li>
+        <li><strong>K-Means Clustering</strong></li>
+        <li><strong>Naive Bayes</strong></li>
+        <li><strong>Neural Networks</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Example – Linear Regression in Python</h2>
+      <pre><code>from sklearn.linear_model import LinearRegression
+
+# Input data
+X = [[1], [2], [3], [4]]
+y = [2, 4, 6, 8]
+
+model = LinearRegression()
+model.fit(X, y)
+
+print(model.predict([[5]]))  # Output: 10.0
+</code></pre>
+    </section>
+
+    <section>
+      <h2>🧩 Model Evaluation Metrics</h2>
+      <ul>
+        <li><strong>Accuracy:</strong> Overall correctness</li>
+        <li><strong>Precision & Recall:</strong> Focused on positive class</li>
+        <li><strong>F1 Score:</strong> Balance between precision and recall</li>
+        <li><strong>Confusion Matrix:</strong> True/False Positives & Negatives</li>
+        <li><strong>ROC-AUC:</strong> How well the model separates classes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📈 Real-Life Applications</h2>
+      <ul>
+        <li>🎥 Movie Recommendations (e.g., Netflix)</li>
+        <li>📧 Spam Detection</li>
+        <li>💳 Fraud Detection</li>
+        <li>🚗 Self-driving Cars</li>
+        <li>📊 Stock Price Forecasting</li>
+        <li>👩‍⚕️ Disease Prediction</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🎓 Learn More & Practice</h2>
+      <ul>
+        <li><a href="https://scikit-learn.org/stable/tutorial/basic/tutorial.html" target="_blank">Scikit-learn Tutorial</a></li>
+        <li><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a></li>
+        <li><a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google ML Crash Course</a></li>
+        <li><a href="https://www.datacamp.com/" target="_blank">DataCamp</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
+
+  <script src="../navbar-fix.js"></script>
+</body>
+</html>

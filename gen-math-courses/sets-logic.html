@@ -2,25 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Set Logic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sets & Logic | General Math Courses</title>
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  
-    <header>
-      <h1>Welcome to Sets Logic</h1>
-    </header>
+
+  <header>
+    <h1>🧠 Sets & Logic</h1>
+    <p>Learn how mathematics organizes ideas, objects, and truth through sets and logic.</p>
+  </header>
 
   <!-- Navbar placeholder -->
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
+  <main>
 
-    
-    <main>
-      
-  <script src="navbar-fix.js"></script>
+    <section>
+      <h2>📦 What are Sets?</h2>
+      <p>A <strong>Set</strong> is a well-defined collection of distinct objects, considered as a single entity. Sets are fundamental in all areas of mathematics.</p>
+      <p>Objects in a set are called <strong>elements</strong> or <strong>members</strong>.</p>
 
- 
+      <p><strong>Notation:</strong> Sets are usually written with curly brackets:</p>
+      <pre>{1, 2, 3}</pre>
+    </section>
+
+    <section>
+      <h2>🔤 Types of Sets</h2>
+
+      <ul>
+        <li><strong>Empty Set (∅):</strong> A set with no elements. Example: { } or ∅</li>
+        <li><strong>Finite Set:</strong> Set with a countable number of elements.</li>
+        <li><strong>Infinite Set:</strong> Set with uncountable elements. Example: {1, 2, 3, ...}</li>
+        <li><strong>Subset:</strong> A set A is a subset of B if every element of A is in B. Notation: A ⊆ B</li>
+        <li><strong>Proper Subset:</strong> A ⊂ B if A ⊆ B and A ≠ B</li>
+        <li><strong>Universal Set:</strong> The set that contains all elements under discussion. Usually denoted by U.</li>
+        <li><strong>Power Set:</strong> The set of all subsets of a set. If A = {1, 2}, then P(A) = {∅, {1}, {2}, {1, 2}}</li>
+        <li><strong>Disjoint Sets:</strong> Two sets that have no elements in common.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Set Operations</h2>
+
+      <ul>
+        <li><strong>Union (A ∪ B):</strong> Elements in A, B, or both</li>
+        <li><strong>Intersection (A ∩ B):</strong> Elements common to both A and B</li>
+        <li><strong>Difference (A - B):</strong> Elements in A but not in B</li>
+        <li><strong>Complement (A′):</strong> Elements not in A (within the universal set)</li>
+      </ul>
+
+      <p><strong>Example:</strong> Let A = {1, 2, 3}, B = {2, 3, 4}</p>
+      <ul>
+        <li>A ∪ B = {1, 2, 3, 4}</li>
+        <li>A ∩ B = {2, 3}</li>
+        <li>A - B = {1}</li>
+        <li>B - A = {4}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📊 Venn Diagrams</h2>
+      <p>Venn diagrams are visual representations of sets and their relationships using overlapping circles.</p>
+
+      <p><strong>Basic Shapes:</strong></p>
+      <ul>
+        <li>Circle A → Represents Set A</li>
+        <li>Overlap of A and B → A ∩ B</li>
+        <li>Entire shaded area of both circles → A ∪ B</li>
+        <li>Area in A only → A - B</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Introduction to Logic</h2>
+      <p>Logic is the framework that determines truth in mathematical reasoning. It involves statements, operators, and rules for combining them.</p>
+
+      <h3>Statements (Propositions)</h3>
+      <p>A statement is a sentence that is either true or false — not both.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>2 + 2 = 4 → True</li>
+        <li>The sky is green → False</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔗 Logical Operators</h2>
+
+      <ul>
+        <li><strong>Negation (¬p):</strong> "Not p"</li>
+        <li><strong>Conjunction (p ∧ q):</strong> "p and q" → True only if both are true</li>
+        <li><strong>Disjunction (p ∨ q):</strong> "p or q" → True if at least one is true</li>
+        <li><strong>Implication (p → q):</strong> "If p, then q"</li>
+        <li><strong>Biconditional (p ↔ q):</strong> "p if and only if q"</li>
+      </ul>
+
+      <h3>Example Table (Truth Table):</h3>
+      <pre>
+p | q | p ∧ q | p ∨ q | p → q | p ↔ q
+-------------------------------------
+T | T |   T   |   T   |   T   |   T
+T | F |   F   |   T   |   F   |   F
+F | T |   F   |   T   |   T   |   F
+F | F |   F   |   F   |   T   |   T
+      </pre>
+    </section>
+
+    <section>
+      <h2>🛠 Logical Equivalences</h2>
+      <p>Used to simplify logical expressions. Two statements are equivalent if they have the same truth values in all cases.</p>
+
+      <ul>
+        <li><strong>De Morgan’s Laws:</strong></li>
+        <ul>
+          <li>¬(p ∧ q) ≡ ¬p ∨ ¬q</li>
+          <li>¬(p ∨ q) ≡ ¬p ∧ ¬q</li>
+        </ul>
+        <li><strong>Double Negation:</strong> ¬(¬p) ≡ p</li>
+        <li><strong>Contrapositive:</strong> p → q ≡ ¬q → ¬p</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📘 Applications of Sets and Logic</h2>
+      <ul>
+        <li>Database querying (SQL logic)</li>
+        <li>Computer science: algorithms, programming, binary logic</li>
+        <li>Mathematical proofs</li>
+        <li>Venn diagrams in data science</li>
+        <li>Set-based decision-making systems</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Practice Problems</h2>
+      <ul>
+        <li>List the power set of A = {1, 2}</li>
+        <li>Let U = {1,2,3,4,5}, A = {1,2,3}, B = {3,4}. Find A ∪ B, A ∩ B, and A′.</li>
+        <li>Draw a Venn diagram for sets A and B with A ∩ B ≠ ∅</li>
+        <li>Use truth tables to determine if (p ∧ q) → p is always true</li>
+        <li>Simplify ¬(p ∨ q) using De Morgan's law</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📚 Learn More</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/math/cc-seventh-grade-math/cc-7th-geometry/cc-7th-venn-diagrams/v/introduction-to-sets" target="_blank">Khan Academy – Introduction to Sets</a></li>
+        <li><a href="https://www.geeksforgeeks.org/sets-in-mathematics/" target="_blank">GeeksForGeeks – Sets</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Set_theory" target="_blank">Wikipedia – Set Theory</a></li>
+        <li><a href="https://www.khanacademy.org/computing/computer-science/cryptography/logic/a/logic-basics" target="_blank">Khan Academy – Logic Basics</a></li>
+      </ul>
+    </section>
+
+    <p><a href="index.html">← Back to General Math Overview</a></p>
+
+  </main>
+
+  <script src="../navbar-fix.js"></script>
+
 </body>
 </html>

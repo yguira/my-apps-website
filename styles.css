@@ -497,13 +497,3 @@ main {
   max-height: 500px;            /* Enough height to reveal content */
   padding: 10px 15px 10px 15px; /* Add vertical padding when expanded */
 }
-
-.content a {
-  color: #2b6cb0;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}

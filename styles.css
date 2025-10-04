@@ -484,9 +484,9 @@ main {
   margin-top: 60px; 
 }
 .sub-content {
-  max-height: 0;                /* Collapsed */
-  overflow: hidden;             /* Hide overflow when collapsed */
-  padding: 0 15px 0 15px;       /* Start with no vertical padding */
+  max-height: 0;              
+  overflow: hidden;            
+  padding: 0 15px 0 15px;      
   border-left: 2px solid #007acc;
   margin-bottom: 10px;
   background: #f9f9f9;
@@ -494,6 +494,6 @@ main {
 }
 
 .sub-content.active {
-  max-height: 500px;            /* Enough height to reveal content */
-  padding: 10px 15px 10px 15px; /* Add vertical padding when expanded */
+  max-height: 500px;          
+  padding: 10px 15px 10px 15px;
 }

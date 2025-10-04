@@ -180,52 +180,113 @@
 <!-- 📈 Statistics Section -->
 <button class="collapsible">➕ 📈 Statistics</button>
 <div class="content">
-
-  <p>Click on a concept to learn more:</p>
+  <p>Click on a concept to explore:</p>
 
   <div class="sub-collapsible-group">
 
+    <!-- Mean -->
     <button class="sub-collapsible">📌 Mean</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> The mean is the sum of all values divided by the number of values.</p>
-      <p><strong>Example:</strong> (4 + 6 + 8) / 3 = 6</p>
+      <p><strong>Definition:</strong> The average of a data set.</p>
+      <p><strong>Formula:</strong> <code>Mean = (Σx) / n</code></p>
+      <p><strong>Example:</strong> (10 + 20 + 30) / 3 = <strong>20</strong></p>
     </div>
 
+    <!-- Median -->
     <button class="sub-collapsible">📌 Median</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> The median is the middle number in a sorted list of values.</p>
-      <p><strong>Example:</strong> For [3, 5, 7], the median is 5.</p>
+      <p><strong>Definition:</strong> Middle value in a sorted list.</p>
+      <p><strong>Odd n:</strong> Middle number</p>
+      <p><strong>Even n:</strong> Average of two middle numbers</p>
+      <p><strong>Example:</strong> Sorted list [3, 6, 7, 8, 12] → Median = 7</p>
     </div>
 
+    <!-- Mode -->
+    <button class="sub-collapsible">📌 Mode</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The number that appears most frequently in a data set.</p>
+      <p><strong>Example:</strong> In [1, 2, 2, 3], mode = 2</p>
+    </div>
+
+    <!-- Z-Score -->
     <button class="sub-collapsible">📌 Z-Score</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> A z-score tells you how many standard deviations a value is from the mean.</p>
-      <p><strong>Formula:</strong> z = (x - μ) / σ</p>
-      <p><strong>Example:</strong> A z-score of 2 means the value is 2 standard deviations above the mean.</p>
+      <p><strong>Formula:</strong> <code>z = (x - μ) / σ</code></p>
+      <p><strong>Interpretation:</strong> How far a value is from the mean in standard deviations.</p>
+
+      <!-- Z Table Preview -->
+      <p><strong>Z Table Snapshot:</strong></p>
+      <table border="1" cellpadding="5" style="font-size: 0.9em; background: #fff;">
+        <thead>
+          <tr><th>Z</th><th>0.00</th><th>0.01</th><th>0.02</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0.0</td><td>0.5000</td><td>0.5040</td><td>0.5080</td></tr>
+          <tr><td>0.1</td><td>0.5398</td><td>0.5438</td><td>0.5478</td></tr>
+          <tr><td>0.2</td><td>0.5793</td><td>0.5832</td><td>0.5871</td></tr>
+        </tbody>
+      </table>
+      <p><a href="resources/z-table-full.html" target="_blank">🔗 View Full Z-Table →</a></p>
     </div>
 
+    <!-- Variance -->
     <button class="sub-collapsible">📌 Variance</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> Variance measures the average squared deviation from the mean.</p>
-      <p><strong>Formula:</strong> σ² = Σ(x - μ)² / N</p>
-      <p><strong>Interpretation:</strong> High variance means data is spread out.</p>
+      <p><strong>Formula:</strong> <code>σ² = Σ(x - μ)² / n</code></p>
+      <p><strong>Interpretation:</strong> Measures spread of data from the mean.</p>
     </div>
 
+    <!-- Standard Deviation -->
+    <button class="sub-collapsible">📌 Standard Deviation</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Square root of variance.</p>
+      <p><code>σ = √Variance</code></p>
+      <p>Used to describe dispersion in the same units as the data.</p>
+    </div>
+
+    <!-- Correlation -->
     <button class="sub-collapsible">📌 Correlation</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> Correlation measures the strength and direction of a linear relationship between two variables.</p>
-      <p><strong>Range:</strong> -1 to +1.</p>
-      <p><strong>Example:</strong> Height and weight are positively correlated.</p>
+      <p><strong>Range:</strong> -1 to +1</p>
+      <p><strong>Positive:</strong> Both variables increase</p>
+      <p><strong>Negative:</strong> One increases, the other decreases</p>
     </div>
 
+    <!-- Skewness -->
     <button class="sub-collapsible">📌 Skewness</button>
     <div class="sub-content">
-      <p><strong>Definition:</strong> Skewness tells you whether the distribution of data leans to the left or right.</p>
-      <p><strong>Types:</strong> Positive skew (right tail), Negative skew (left tail).</p>
+      <p><strong>Right Skew (positive):</strong> Long tail to the right</p>
+      <p><strong>Left Skew (negative):</strong> Long tail to the left</p>
+      <img src="assets/skewness-diagram.png" alt="Skewness Diagram" style="max-width: 300px; margin-top: 10px;">
+    </div>
+
+    <!-- Kurtosis -->
+    <button class="sub-collapsible">📌 Kurtosis</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Describes the shape (tailedness) of the distribution</p>
+      <ul>
+        <li><strong>Leptokurtic:</strong> Peaked, heavy tails</li>
+        <li><strong>Platykurtic:</strong> Flat, light tails</li>
+        <li><strong>Mesokurtic:</strong> Normal kurtosis</li>
+      </ul>
+    </div>
+
+    <!-- Boxplot -->
+    <button class="sub-collapsible">📌 Boxplot</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Visual summary of data using quartiles</p>
+      <p>Shows median, spread, and outliers</p>
+      <img src="assets/boxplot-example.png" alt="Boxplot Example" style="max-width: 300px; margin-top: 10px;">
     </div>
 
   </div>
+
+  <p style="margin-top: 20px; text-align: center;">
+    📘 Want to go deeper?<br>
+    <a href="statistics.html" class="floating-button" style="position: static; display: inline-block; margin-top: 10px;">Explore Full Statistics Guide →</a>
+  </p>
 </div>
+
 
       <button class="collapsible">➕ 🔍 Data Analytics</button>
       <div class="content">

@@ -356,6 +356,28 @@
   </footer>
   
   <script src="navbar-fix.js"></script>
+  <script>
+  // Handle main collapsibles
+  const collapsibles = document.querySelectorAll(".collapsible");
+  collapsibles.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Handle sub-collapsibles
+  const subCollapsibles = document.querySelectorAll(".sub-collapsible");
+  subCollapsibles.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const subContent = this.nextElementSibling;
+      subContent.style.display = subContent.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
 
 </body>
 </html>

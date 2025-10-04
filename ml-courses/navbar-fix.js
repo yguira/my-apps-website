@@ -1,3 +1,5 @@
+
+
 // Fetch and inject navbar
 fetch('navbar.html')
   .then(response => response.text())

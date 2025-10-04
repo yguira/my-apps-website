@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url('images/background2.png');
   background-size: cover;
@@ -85,6 +89,7 @@ main {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
+  margin-top: 60px;
 }
 
 /* Section Styles */
@@ -220,7 +225,6 @@ h2 {
   background-color: #374bd3;
 }
 
-
 /* Footer */
 footer {
   background-color: #1e3a8a;
@@ -293,8 +297,8 @@ footer {
 }
 
 #choices .quiz-button {
-  display: inline-block; /* allow sizing based on content */
-  max-width: 100%; /* prevent overflow */
+  display: inline-block;
+  max-width: 100%;
   text-align: left;
   padding: 12px 16px;
   font-size: 16px;
@@ -304,9 +308,8 @@ footer {
   border-radius: 6px;
   transition: background 0.3s;
   cursor: pointer;
-  word-wrap: break-word; /* optional: wraps long words */
+  word-wrap: break-word;
 }
-
 
 #choices .quiz-button:hover {
   background-color: #2563eb;
@@ -337,9 +340,10 @@ footer {
   color: #444;
   margin-bottom: 10px;
 }
+
 /* 🎯 Style the NEXT button to be bigger and colorful */
 #next-btn {
-  background-color: #10b981; /* Emerald green */
+  background-color: #10b981;
   color: white;
   font-size: 18px;
   padding: 14px 28px;
@@ -348,14 +352,16 @@ footer {
   font-weight: bold;
   margin-top: 20px;
   transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 #next-btn:hover {
-  background-color: #059669; /* darker green on hover */
-  transform: scale(1.05); /* subtle zoom effect */
+  background-color: #059669;
+  transform: scale(1.05);
   cursor: pointer;
 }
+
 /* Wrap nav items and search bar in one row */
 .nav-container {
   display: flex;
@@ -392,12 +398,9 @@ footer {
 #search-form button:hover {
   background-color: #2563eb;
 }
-#contact-form {
-  display: none;
-}
+
 /* Smooth toggle for contact form */
 #contact-form {
-  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -407,8 +410,9 @@ footer {
 #contact-form.show {
   display: block;
   opacity: 1;
-  max-height: 800px; /* enough for the full form */
+  max-height: 800px;
 }
+
 #about p {
   margin-bottom: 16px;
   font-size: 1.05em;
@@ -422,6 +426,7 @@ footer {
 #about a:hover {
   color: #2563eb;
 }
+
 #Programmer ul {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -436,6 +441,7 @@ footer {
   margin-top: 20px;
   color: #1e40af;
 }
+
 /* Mobile nav toggle styles */
 .hamburger {
   background: none;
@@ -456,9 +462,6 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
-  }
-
-  .hamburger {
     cursor: pointer;
   }
 
@@ -480,13 +483,11 @@ footer {
   }
 }
 
-main {
-  margin-top: 60px; 
-}
+/* Collapsible sub-sections */
 .sub-content {
-  max-height: 0;              
-  overflow: hidden;            
-  padding: 0 15px 0 15px;      
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px 0 15px;
   border-left: 2px solid #007acc;
   margin-bottom: 10px;
   background: #f9f9f9;
@@ -494,13 +495,16 @@ main {
 }
 
 .sub-content.active {
-  max-height: 500px;          
+  max-height: 500px;
   padding: 10px 15px 10px 15px;
 }
-.collapsible.active, .sub-collapsible.active {
+
+.collapsible.active,
+.sub-collapsible.active {
   background-color: #cce6ff;
   font-weight: bold;
 }
+
 .sub-collapsible {
   background-color: #e8f4fd;
   color: #333;
@@ -519,21 +523,15 @@ main {
   background-color: #d0e9ff;
 }
 
-.sub-content {
-  display: none;
-  padding: 0 15px 10px;
-  border-left: 3px solid #007acc;
-  background-color: #f9f9f9;
-  margin-bottom: 10px;
-}
-
+/* Tables */
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin-top: 10px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #ccc;
   padding: 6px 10px;
 }

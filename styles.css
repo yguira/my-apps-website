@@ -501,3 +501,39 @@ main {
   background-color: #cce6ff;
   font-weight: bold;
 }
+.sub-collapsible {
+  background-color: #e8f4fd;
+  color: #333;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+  margin: 6px 0;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.sub-collapsible:hover {
+  background-color: #d0e9ff;
+}
+
+.sub-content {
+  display: none;
+  padding: 0 15px 10px;
+  border-left: 3px solid #007acc;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+}

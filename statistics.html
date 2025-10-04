@@ -129,3 +129,22 @@
     <a href="advanced-stats.html" target="_blank">📘 Full Statistics Resource Page →</a>
   </p>
 </div>
+
+<script>
+  document.querySelectorAll(".collapsible").forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  document.querySelectorAll(".sub-collapsible").forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+

@@ -1,0 +1,131 @@
+<button class="collapsible">➕ 📈 Statistics</button>
+<div class="content">
+
+  <p>Statistics helps us make sense of data. Explore the essentials 👇</p>
+
+  <div class="sub-collapsible-group">
+
+    <!-- Mean -->
+    <button class="sub-collapsible">📌 Mean (Average)</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The mean is the sum of all values divided by how many values.</p>
+      <p><strong>Example:</strong> (10 + 20 + 30) / 3 = <code>20</code></p>
+      <p><strong>Use:</strong> Useful for finding central tendency.</p>
+    </div>
+
+    <!-- Median -->
+    <button class="sub-collapsible">📌 Median</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The middle value in a sorted list.</p>
+      <p><strong>Example:</strong> Sorted: [1, 3, 5] → Median = <code>3</code></p>
+      <p><strong>Why it matters:</strong> Not affected by outliers.</p>
+    </div>
+
+    <!-- Mode -->
+    <button class="sub-collapsible">📌 Mode</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The value(s) that appear most often.</p>
+      <p><strong>Example:</strong> [2, 2, 3, 3, 3, 4] → Mode = <code>3</code></p>
+    </div>
+
+    <!-- Range -->
+    <button class="sub-collapsible">📌 Range</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Difference between highest and lowest values.</p>
+      <p><strong>Formula:</strong> Max - Min</p>
+      <p><strong>Example:</strong> [2, 4, 7] → Range = <code>7 - 2 = 5</code></p>
+    </div>
+
+    <!-- Variance -->
+    <button class="sub-collapsible">📌 Variance (σ²)</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> How far each number is from the mean (on average).</p>
+      <p><strong>Formula:</strong> σ² = Σ(x - μ)² / N</p>
+      <p><strong>Example:</strong> A low variance means data is close to the mean.</p>
+    </div>
+
+    <!-- Standard Deviation -->
+    <button class="sub-collapsible">📌 Standard Deviation (σ)</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The square root of variance; shows data spread.</p>
+      <p><strong>Use:</strong> Common in everything from finance to ML models.</p>
+    </div>
+
+    <!-- Z-Score -->
+    <button class="sub-collapsible">📌 Z-Score</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> How many standard deviations a value is from the mean.</p>
+      <p><strong>Formula:</strong> z = (x - μ) / σ</p>
+      <p><strong>Example:</strong> z = (85 - 70) / 10 = <code>+1.5</code></p>
+
+      <!-- Mini Z Table -->
+      <h4>🧮 Z-Table (partial)</h4>
+      <table style="border-collapse: collapse; width: 100%; text-align: center;">
+        <thead>
+          <tr style="background: #eee;">
+            <th>Z</th>
+            <th>Area (Left)</th>
+            <th>Percentile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0.0</td><td>0.5000</td><td>50%</td></tr>
+          <tr><td>1.0</td><td>0.8413</td><td>84%</td></tr>
+          <tr><td>1.5</td><td>0.9332</td><td>93%</td></tr>
+          <tr><td>2.0</td><td>0.9772</td><td>97.7%</td></tr>
+          <tr><td>3.0</td><td>0.9987</td><td>99.87%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Skewness -->
+    <button class="sub-collapsible">📌 Skewness</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Measures the asymmetry of a distribution.</p>
+      <ul>
+        <li>➡️ Positive skew: tail on the right (e.g. income)</li>
+        <li>⬅️ Negative skew: tail on the left</li>
+      </ul>
+    </div>
+
+    <!-- Correlation -->
+    <button class="sub-collapsible">📌 Correlation (r)</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> Measures relationship strength between two variables.</p>
+      <p><strong>Range:</strong> -1 to +1</p>
+      <p><strong>Example:</strong> +0.9 means strong positive correlation</p>
+    </div>
+
+    <!-- Confidence Intervals -->
+    <button class="sub-collapsible">📌 Confidence Intervals</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> A range of values that's likely to contain a population parameter.</p>
+      <p><strong>Example:</strong> "We're 95% confident the mean is between 68 and 72."</p>
+    </div>
+
+    <!-- Hypothesis Testing -->
+    <button class="sub-collapsible">📌 Hypothesis Testing</button>
+    <div class="sub-content">
+      <p><strong>What is it?</strong> Method to test if a claim (hypothesis) about a population is true.</p>
+      <ul>
+        <li>Null Hypothesis (H₀): Default assumption</li>
+        <li>Alternative Hypothesis (H₁): What you're testing for</li>
+        <li>Use: t-tests, chi-square tests, p-values</li>
+      </ul>
+    </div>
+
+    <!-- P-Value -->
+    <button class="sub-collapsible">📌 P-Value</button>
+    <div class="sub-content">
+      <p><strong>Definition:</strong> The probability of observing your results, assuming H₀ is true.</p>
+      <p><strong>Rule:</strong> If p < 0.05 → reject H₀</p>
+    </div>
+
+  </div>
+
+  <p style="margin-top: 20px; font-weight: bold;">
+    Want to learn more advanced stats concepts? Dive into:
+    <br>
+    <a href="advanced-stats.html" target="_blank">📘 Full Statistics Resource Page →</a>
+  </p>
+</div>

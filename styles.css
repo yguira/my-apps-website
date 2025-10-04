@@ -497,3 +497,7 @@ main {
   max-height: 500px;          
   padding: 10px 15px 10px 15px;
 }
+.collapsible.active, .sub-collapsible.active {
+  background-color: #cce6ff;
+  font-weight: bold;
+}

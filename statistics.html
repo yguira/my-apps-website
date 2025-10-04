@@ -2,86 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Satistics</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics | General Math Courses</title>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
+
   <header>
-    <h1>Statistics</h1>
-    <p>Let's try to understand stats</p>
+    <h1>📊 Learn Statistics</h1>
+    <p>A beginner-friendly guide to understanding core statistical concepts and how they are used.</p>
   </header>
 
-  <!-- Navbar placeholder -->
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
+  <main>
 
+    <section>
+      <h2>📌 What is Statistics?</h2>
+      <p>
+        Statistics is the science of collecting, analyzing, interpreting, and presenting data. It helps us make informed decisions in fields like science, business, psychology, and more.
+      </p>
+    </section>
 
-<button class="collapsible">➕ 📈 Statistics</button>
-<div class="content">
+    <section>
+      <h2>📈 Measures of Central Tendency</h2>
 
-  <p>Statistics helps us make sense of data. Explore the essentials 👇</p>
-
-  <div class="sub-collapsible-group">
-
-    <!-- Mean -->
-    <button class="sub-collapsible">📌 Mean (Average)</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> The mean is the sum of all values divided by how many values.</p>
+      <h3>Mean (Average)</h3>
+      <p><strong>Definition:</strong> Add all values and divide by how many there are.</p>
       <p><strong>Example:</strong> (10 + 20 + 30) / 3 = <code>20</code></p>
-      <p><strong>Use:</strong> Useful for finding central tendency.</p>
-    </div>
 
-    <!-- Median -->
-    <button class="sub-collapsible">📌 Median</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> The middle value in a sorted list.</p>
-      <p><strong>Example:</strong> Sorted: [1, 3, 5] → Median = <code>3</code></p>
-      <p><strong>Why it matters:</strong> Not affected by outliers.</p>
-    </div>
+      <h3>Median</h3>
+      <p><strong>Definition:</strong> The middle value when data is sorted.</p>
+      <p><strong>Example:</strong> [3, 5, 7] → Median = <code>5</code></p>
 
-    <!-- Mode -->
-    <button class="sub-collapsible">📌 Mode</button>
-    <div class="sub-content">
+      <h3>Mode</h3>
       <p><strong>Definition:</strong> The value(s) that appear most often.</p>
-      <p><strong>Example:</strong> [2, 2, 3, 3, 3, 4] → Mode = <code>3</code></p>
-    </div>
+      <p><strong>Example:</strong> [2, 2, 3, 4] → Mode = <code>2</code></p>
+    </section>
 
-    <!-- Range -->
-    <button class="sub-collapsible">📌 Range</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> Difference between highest and lowest values.</p>
-      <p><strong>Formula:</strong> Max - Min</p>
-      <p><strong>Example:</strong> [2, 4, 7] → Range = <code>7 - 2 = 5</code></p>
-    </div>
+    <section>
+      <h2>📊 Measures of Spread</h2>
 
-    <!-- Variance -->
-    <button class="sub-collapsible">📌 Variance (σ²)</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> How far each number is from the mean (on average).</p>
+      <h3>Range</h3>
+      <p><strong>Definition:</strong> Highest value minus lowest value.</p>
+      <p><strong>Example:</strong> [2, 5, 9] → 9 - 2 = <code>7</code></p>
+
+      <h3>Variance (σ²)</h3>
+      <p><strong>Definition:</strong> The average of squared differences from the mean.</p>
       <p><strong>Formula:</strong> σ² = Σ(x - μ)² / N</p>
-      <p><strong>Example:</strong> A low variance means data is close to the mean.</p>
-    </div>
 
-    <!-- Standard Deviation -->
-    <button class="sub-collapsible">📌 Standard Deviation (σ)</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> The square root of variance; shows data spread.</p>
-      <p><strong>Use:</strong> Common in everything from finance to ML models.</p>
-    </div>
+      <h3>Standard Deviation (σ)</h3>
+      <p><strong>Definition:</strong> The square root of the variance. Shows how spread out data is.</p>
+    </section>
 
-    <!-- Z-Score -->
-    <button class="sub-collapsible">📌 Z-Score</button>
-    <div class="sub-content">
+    <section>
+      <h2>📏 Z-Scores & The Normal Distribution</h2>
+
+      <h3>Z-Score</h3>
       <p><strong>Definition:</strong> How many standard deviations a value is from the mean.</p>
       <p><strong>Formula:</strong> z = (x - μ) / σ</p>
-      <p><strong>Example:</strong> z = (85 - 70) / 10 = <code>+1.5</code></p>
+      <p><strong>Example:</strong> z = (85 - 70) / 10 = <code>1.5</code></p>
 
-      <!-- Mini Z Table -->
-      <h4>🧮 Z-Table (partial)</h4>
-      <table style="border-collapse: collapse; width: 100%; text-align: center;">
+      <h3>Z-Table (Partial)</h3>
+      <table>
         <thead>
-          <tr style="background: #eee;">
+          <tr>
             <th>Z</th>
             <th>Area (Left)</th>
             <th>Percentile</th>
@@ -89,82 +74,74 @@
         </thead>
         <tbody>
           <tr><td>0.0</td><td>0.5000</td><td>50%</td></tr>
-          <tr><td>1.0</td><td>0.8413</td><td>84%</td></tr>
-          <tr><td>1.5</td><td>0.9332</td><td>93%</td></tr>
-          <tr><td>2.0</td><td>0.9772</td><td>97.7%</td></tr>
+          <tr><td>1.0</td><td>0.8413</td><td>84.13%</td></tr>
+          <tr><td>1.5</td><td>0.9332</td><td>93.32%</td></tr>
+          <tr><td>2.0</td><td>0.9772</td><td>97.72%</td></tr>
           <tr><td>3.0</td><td>0.9987</td><td>99.87%</td></tr>
         </tbody>
       </table>
-    </div>
+    </section>
 
-    <!-- Skewness -->
-    <button class="sub-collapsible">📌 Skewness</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> Measures the asymmetry of a distribution.</p>
+    <section>
+      <h2>📐 Distribution Shape</h2>
+
+      <h3>Skewness</h3>
+      <p><strong>Definition:</strong> Measures if the data is symmetrical or skewed.</p>
       <ul>
-        <li>➡️ Positive skew: tail on the right (e.g. income)</li>
-        <li>⬅️ Negative skew: tail on the left</li>
+        <li>➡️ Positive skew: longer tail on the right (e.g., income)</li>
+        <li>⬅️ Negative skew: longer tail on the left</li>
       </ul>
-    </div>
 
-    <!-- Correlation -->
-    <button class="sub-collapsible">📌 Correlation (r)</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> Measures relationship strength between two variables.</p>
+      <h3>Kurtosis</h3>
+      <p><strong>Definition:</strong> Measures how heavy or light the tails of a distribution are.</p>
+    </section>
+
+    <section>
+      <h2>📉 Correlation & Relationships</h2>
+
+      <h3>Correlation (r)</h3>
+      <p><strong>Definition:</strong> Measures the linear relationship between two variables.</p>
       <p><strong>Range:</strong> -1 to +1</p>
-      <p><strong>Example:</strong> +0.9 means strong positive correlation</p>
-    </div>
+      <p><strong>Example:</strong> r = 0.9 → strong positive correlation</p>
+    </section>
 
-    <!-- Confidence Intervals -->
-    <button class="sub-collapsible">📌 Confidence Intervals</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> A range of values that's likely to contain a population parameter.</p>
-      <p><strong>Example:</strong> "We're 95% confident the mean is between 68 and 72."</p>
-    </div>
+    <section>
+      <h2>🧪 Hypothesis Testing</h2>
 
-    <!-- Hypothesis Testing -->
-    <button class="sub-collapsible">📌 Hypothesis Testing</button>
-    <div class="sub-content">
-      <p><strong>What is it?</strong> Method to test if a claim (hypothesis) about a population is true.</p>
+      <h3>What is Hypothesis Testing?</h3>
+      <p>It’s a method to test a claim (hypothesis) about a population using sample data.</p>
       <ul>
-        <li>Null Hypothesis (H₀): Default assumption</li>
-        <li>Alternative Hypothesis (H₁): What you're testing for</li>
-        <li>Use: t-tests, chi-square tests, p-values</li>
+        <li><strong>H₀ (Null):</strong> No effect or no difference</li>
+        <li><strong>H₁ (Alt):</strong> There is an effect or difference</li>
       </ul>
-    </div>
 
-    <!-- P-Value -->
-    <button class="sub-collapsible">📌 P-Value</button>
-    <div class="sub-content">
-      <p><strong>Definition:</strong> The probability of observing your results, assuming H₀ is true.</p>
+      <h3>P-Value</h3>
+      <p><strong>Definition:</strong> Probability of getting your result (or more extreme) if H₀ is true.</p>
       <p><strong>Rule:</strong> If p < 0.05 → reject H₀</p>
-    </div>
+    </section>
 
-  </div>
+    <section>
+      <h2>📊 Confidence Intervals</h2>
+      <p><strong>Definition:</strong> A range likely to contain the true population parameter.</p>
+      <p><strong>Example:</strong> "We are 95% confident the mean is between 48 and 52."</p>
+    </section>
 
-  <p style="margin-top: 20px; font-weight: bold;">
-    Want to learn more advanced stats concepts? Dive into:
-    <br>
-    <a href="advanced-stats.html" target="_blank">📘 Full Statistics Resource Page →</a>
-  </p>
-</div>
+    <section>
+      <h2>📚 Further Learning & Tools</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank">Khan Academy – Statistics</a></li>
+        <li><a href="https://www.statisticshowto.com/" target="_blank">Statistics How To</a></li>
+        <li><a href="https://www.socscistatistics.com/" target="_blank">Social Science Statistics Tools</a></li>
+        <li><a href="advanced-stats.html" target="_blank">📘 Advanced Stats Concepts →</a></li>
+      </ul>
+    </section>
 
-<script src="navbar-fix.js"></script>
-<script>
-  document.querySelectorAll(".collapsible").forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      let content = this.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    });
-  });
+  </main>
 
-  document.querySelectorAll(".sub-collapsible").forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      let content = this.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
-    });
-  });
-</script>
+  <footer>
+    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+  </footer>
 
+  <script src="navbar-fix.js"></script>
+</body>
+</html>

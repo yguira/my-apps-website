@@ -418,27 +418,61 @@
   </footer>
   
   <script src="navbar-fix.js"></script>
-  <script>
-  // Handle main collapsibles
-  const collapsibles = document.querySelectorAll(".collapsible");
-  collapsibles.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const content = this.nextElementSibling;
-      content.style.display = content.style.display === "block" ? "none" : "block";
+
+<script>
+  // MAIN collapsibles (same as before)
+  document.querySelectorAll('.collapsible').forEach(btn => {
+    btn.type = 'button';
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      if (!panel || !panel.classList.contains('content')) return;
+      const isOpen = panel.style.display === 'block';
+      panel.style.display = isOpen ? 'none' : 'block';
+      btn.classList.toggle('active', !isOpen);
     });
   });
 
-  // Handle sub-collapsibles
-  const subCollapsibles = document.querySelectorAll(".sub-collapsible");
-  subCollapsibles.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const subContent = this.nextElementSibling;
-      subContent.style.display = subContent.style.display === "block" ? "none" : "block";
+  // SUB collapsibles (animated + safe against display:none !important)
+  const panels = document.querySelectorAll('.sub-content');
+  panels.forEach(p => {
+    // Ensure they're renderable even if earlier CSS has display:none !important
+    p.style.setProperty('display', 'block', 'important');
+    p.style.maxHeight = '0px';         // start collapsed
+  });
+
+  document.querySelectorAll('.sub-collapsible').forEach(btn => {
+    btn.type = 'button';
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      if (!panel || !panel.classList.contains('sub-content')) return;
+
+      const isOpen = panel.classList.contains('active');
+
+      if (isOpen) {
+        // Collapse: from current content height back to 0
+        panel.style.maxHeight = panel.scrollHeight + 'px'; // set current height
+        requestAnimationFrame(() => {
+          panel.classList.remove('active');                 // padding anim
+          panel.style.maxHeight = '0px';
+        });
+      } else {
+        // Expand: measure, animate, then uncap height
+        panel.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        const onEnd = (e) => {
+          if (e.propertyName === 'max-height') {
+            panel.style.maxHeight = 'none';                 // allow full content
+            panel.removeEventListener('transitionend', onEnd);
+          }
+        };
+        panel.addEventListener('transitionend', onEnd);
+      }
+
+      btn.classList.toggle('active', !isOpen);
     });
   });
 </script>
+
 
 
 </body>

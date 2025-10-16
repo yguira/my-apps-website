@@ -483,24 +483,24 @@ footer {
 main {
   margin-top: 60px; 
 }
+
+/* Smooth animated sub-panels */
 .sub-content {
-  max-height: 0;              
-  overflow: hidden;            
-  padding: 0 15px 0 15px;      
-  border-left: 2px solid #007acc;
-  margin-bottom: 10px;
+  /* we'll force display:block via JS to beat any !important conflicts */
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;                 /* collapsed: no vertical padding */
+  border-left: 3px solid #007acc;
   background: #f9f9f9;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  margin-bottom: 10px;
+  transition: max-height 0.45s ease, padding 0.3s ease;
 }
 
+
 .sub-content.active {
-  max-height: 500px;          
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px;
 }
-.collapsible.active, .sub-collapsible.active {
-  background-color: #cce6ff;
-  font-weight: bold;
-}
+
 .sub-collapsible {
   background-color: #e8f4fd;
   color: #333;
@@ -514,18 +514,8 @@ main {
   outline: none;
   transition: background-color 0.3s;
 }
-
-.sub-collapsible:hover {
-  background-color: #d0e9ff;
-}
-
-.sub-content {
-  display: none;
-  padding: 0 15px 10px;
-  border-left: 3px solid #007acc;
-  background-color: #f9f9f9;
-  margin-bottom: 10px;
-}
+.sub-collapsible:hover { background-color: #d0e9ff; }
+.sub-collapsible.active { background-color: #cce6ff; font-weight: bold; }
 
 table {
   border: 1px solid #ccc;

@@ -365,11 +365,6 @@ function getKeywordResponse(text) {
   return null;
 }
 
-const keywordResponse = getKeywordResponse(normalizedText);
-
-if (keywordResponse) {
-  return keywordResponse;
-}
 
 function normalizeMessage(text) {
   return text

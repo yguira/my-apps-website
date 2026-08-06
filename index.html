@@ -166,60 +166,100 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
 <!-- 📬 Contact Section -->
 <section id="contact" class="contact-section">
   <h2>📩 Contact Me</h2>
-  <p>If you have questions, feedback, or just want to say hello — click below to send me a message.</p>
 
-  <button onclick="toggleContactForm()" class="quiz-button">📨 Open Contact Form</button>
+  <p>
+    If you have questions, feedback, or just want to say hello —
+    click below to send me a message.
+  </p>
 
-<form
-  id="contact-form"
-  class="contact-form"
-  style="max-width: 500px; margin: 30px auto;"
->
+  <button
+    type="button"
+    onclick="toggleContactForm(this)"
+    class="quiz-button"
+  >
+    📨 Open Contact Form
+  </button>
 
-    <label for="name">Your Name:</label>
-    <input type="text" name="name" id="name" required placeholder="John Doe" />
+  <form
+    id="contact-form"
+    class="contact-form"
+    action="https://formspree.io/f/xgvnonjg"
+    method="POST"
+    style="max-width: 500px; margin: 30px auto;"
+  >
+    <label for="contact-name">Your Name:</label>
+    <input
+      type="text"
+      name="name"
+      id="contact-name"
+      required
+      placeholder="John Doe"
+    />
 
-    <label for="email">Your Email:</label>
-    <input type="email" name="email" id="email" required placeholder="you@example.com" />
+    <label for="contact-email">Your Email:</label>
+    <input
+      type="email"
+      name="email"
+      id="contact-email"
+      required
+      placeholder="you@example.com"
+    />
 
-    <label for="message">Your Message:</label>
-    <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."></textarea>
+    <label for="contact-message">Your Message:</label>
+    <textarea
+      name="message"
+      id="contact-message"
+      rows="5"
+      required
+      placeholder="Type your message here..."
+    ></textarea>
 
-    <!-- Honeypot -->
-    <input type="text" name="_gotcha" style="display:none" />
+    <input
+      type="text"
+      name="_gotcha"
+      tabindex="-1"
+      autocomplete="off"
+      style="display: none;"
+    />
 
-    <!-- Optional redirect -->
-    <input type="hidden" name="_next" value="thankyou.html" />
+    <input
+      type="hidden"
+      name="_subject"
+      value="New website contact message"
+    />
 
-    <button type="submit" class="quiz-button">Send Message</button>
+    <button type="submit" class="quiz-button">
+      Send Message
+    </button>
   </form>
 </section>
 
-  </main>
+</main>
 
-  <footer>
-    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 My Apps | Built with ❤️ by Me</p>
+</footer>
 
-  <script src="navbar-fix.js"></script>
+<script src="navbar-fix.js"></script>
+<script src="chat.js"></script>
 
-  <script src="chat.js"></script>
+<script>
+  function toggleContactForm(button) {
+    const form = document.getElementById("contact-form");
 
-  <script>
-function toggleContactForm() {
-  const form = document.getElementById('contact-form');
-  const btn = event.target;
+    form.classList.toggle("show");
 
-  form.classList.toggle('show');
+    if (form.classList.contains("show")) {
+      button.textContent = "❌ Close Contact Form";
 
-  if (form.classList.contains('show')) {
-    btn.textContent = '❌ Close Contact Form';
-    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    btn.textContent = '📨 Open Contact Form';
+      form.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } else {
+      button.textContent = "📨 Open Contact Form";
+    }
   }
-}
-
 </script>
 
 </body>

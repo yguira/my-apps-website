@@ -168,14 +168,17 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
   <h2>📩 Contact Me</h2>
 
   <p>
-    If you have questions, feedback, or just want to say hello —
-    click below to send me a message.
+    Have a question, found a bug, or want to suggest a feature?
+    Send me a message below.
   </p>
 
   <button
     type="button"
+    id="contact-toggle-button"
     onclick="toggleContactForm(this)"
     class="quiz-button"
+    aria-expanded="false"
+    aria-controls="contact-form"
   >
     📨 Open Contact Form
   </button>
@@ -193,6 +196,8 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
       name="name"
       id="contact-name"
       required
+      maxlength="100"
+      autocomplete="name"
       placeholder="John Doe"
     />
 
@@ -202,8 +207,24 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
       name="email"
       id="contact-email"
       required
+      maxlength="150"
+      autocomplete="email"
       placeholder="you@example.com"
     />
+
+    <label for="contact-reason">Reason for Contact:</label>
+    <select
+      name="reason"
+      id="contact-reason"
+      required
+    >
+      <option value="" selected disabled>Select a reason</option>
+      <option value="General Question">General Question</option>
+      <option value="Bug Report">Bug Report</option>
+      <option value="Feature Request">Feature Request</option>
+      <option value="Business Inquiry">Business Inquiry</option>
+      <option value="Feedback">Feedback</option>
+    </select>
 
     <label for="contact-message">Your Message:</label>
     <textarea
@@ -211,14 +232,21 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
       id="contact-message"
       rows="5"
       required
+      maxlength="1000"
       placeholder="Type your message here..."
     ></textarea>
 
+    <div class="character-counter">
+      <span id="message-count">0</span>/1000 characters
+    </div>
+
+    <!-- Honeypot field for spam prevention -->
     <input
       type="text"
       name="_gotcha"
       tabindex="-1"
       autocomplete="off"
+      aria-hidden="true"
       style="display: none;"
     />
 
@@ -228,12 +256,22 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
       value="New website contact message"
     />
 
-    <button type="submit" class="quiz-button">
+    <button
+      type="submit"
+      id="contact-submit-button"
+      class="quiz-button"
+    >
       Send Message
     </button>
+
+    <p
+      id="contact-status"
+      class="contact-status"
+      role="status"
+      aria-live="polite"
+    ></p>
   </form>
 </section>
-
 </main>
 
 <footer>
@@ -244,22 +282,93 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
 <script src="chat.js"></script>
 
 <script>
+  const contactForm = document.getElementById("contact-form");
+  const contactToggleButton = document.getElementById(
+    "contact-toggle-button"
+  );
+  const contactSubmitButton = document.getElementById(
+    "contact-submit-button"
+  );
+  const contactStatus = document.getElementById("contact-status");
+  const messageField = document.getElementById("contact-message");
+  const messageCount = document.getElementById("message-count");
+
   function toggleContactForm(button) {
-    const form = document.getElementById("contact-form");
+    const isOpen = contactForm.classList.toggle("show");
 
-    form.classList.toggle("show");
+    button.setAttribute("aria-expanded", String(isOpen));
 
-    if (form.classList.contains("show")) {
+    if (isOpen) {
       button.textContent = "❌ Close Contact Form";
 
-      form.scrollIntoView({
+      contactForm.scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
     } else {
       button.textContent = "📨 Open Contact Form";
+      contactStatus.textContent = "";
+      contactStatus.className = "contact-status";
     }
   }
+
+  messageField.addEventListener("input", function () {
+    messageCount.textContent = messageField.value.length;
+  });
+
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    contactSubmitButton.disabled = true;
+    contactSubmitButton.textContent = "⏳ Sending...";
+    contactStatus.textContent = "";
+    contactStatus.className = "contact-status";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("The form could not be submitted.");
+      }
+
+      contactStatus.textContent =
+        "✅ Thank you! Your message has been sent successfully.";
+      contactStatus.className = "contact-status success";
+
+      contactForm.reset();
+      messageCount.textContent = "0";
+
+      setTimeout(function () {
+        contactForm.classList.remove("show");
+
+        contactToggleButton.textContent =
+          "📨 Open Contact Form";
+
+        contactToggleButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        contactStatus.textContent = "";
+        contactStatus.className = "contact-status";
+      }, 3000);
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      contactStatus.textContent =
+        "❌ Your message could not be sent. Please try again.";
+      contactStatus.className = "contact-status error";
+    } finally {
+      contactSubmitButton.disabled = false;
+      contactSubmitButton.textContent = "Send Message";
+    }
+  });
 </script>
 
 </body>

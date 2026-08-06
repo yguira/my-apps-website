@@ -508,6 +508,62 @@ footer {
   visibility: visible;
   pointer-events: auto;
 }
+
+.contact-section select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #1f2937;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus,
+.contact-section select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  border-color: #2563eb;
+}
+
+.character-counter {
+  margin-top: -14px;
+  margin-bottom: 14px;
+  text-align: right;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.contact-status {
+  min-height: 24px;
+  margin-top: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-status.success {
+  color: #047857;
+}
+
+.contact-status.error {
+  color: #b91c1c;
+}
+
+#contact-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .contact-section .quiz-button {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 #about p {
   margin-bottom: 16px;
   font-size: 1.05em;

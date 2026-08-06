@@ -305,6 +305,7 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
         behavior: "smooth",
         block: "start"
       });
+      document.getElementById("contact-name").focus();
     } else {
       button.textContent = "📨 Open Contact Form";
       contactStatus.textContent = "";
@@ -357,7 +358,7 @@ Hi, I’m a Computer Science / Cybersecurity graduate and I have a passion for s
 
         contactStatus.textContent = "";
         contactStatus.className = "contact-status";
-      }, 3000);
+      }, 7000);
     } catch (error) {
       console.error("Contact form error:", error);
 

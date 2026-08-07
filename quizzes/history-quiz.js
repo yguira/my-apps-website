@@ -437,7 +437,7 @@ const questions = [
   {
     category: "European History",
     difficulty: "hard",
-    question: "Which event in  defenestration helped trigger the Thirty Years' War?",
+    question: "Which event helped trigger the Thirty Years' War?",
     choices: [
       "Defenestration of Prague",
       "Boston Tea Party",

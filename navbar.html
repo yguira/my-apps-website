@@ -1,33 +1,28 @@
-<!-- navbar.html -->
-<nav>
+<!-- Shared YG-Tech navbar -->
+<nav class="site-nav" aria-label="Primary navigation">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo" style="color: white; font-weight: bold; font-size: 1.4em;">My Apps</div>
+    <a class="logo" href="index.html" aria-label="YG-Tech home">YG-Tech</a>
 
-    <!-- Hamburger Icon -->
-    <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</button>
+    <button id="menu-toggle" class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
 
-    <!-- Navigation Links + Search -->
     <div id="nav-links" class="nav-links">
-      <ul style="display: flex; flex-wrap: wrap; gap: 30px; padding: 0; margin: 0;">
-        <li><a href="index.html#home" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Home 🏠</a></li>
-        <li><a href="index.html#chatbox" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Chat 💬</a></li>
-        <li><a href="index.html#about" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">About 👤</a></li>
-        <li><a href="index.html#contact" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Contact 📞</a></li>
-        <li><a href="downloads.html" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Free Downloads 📦</a></li>
-        <li><a href="quizzes.html" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Quizzes 🎯</a></li>
-        <li><a href="index.html#Programmer" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Programmer 💻</a></li>
-        <li><a href="data-resources.html" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Data Science 📊</a></li>
-        <li><a href="datasets.html" style="color:white; font-weight:bold; padding:10px 20px; border-radius:5px; text-decoration:none;">Free Datasets 📁</a></li>
-
+      <ul class="nav-menu">
+        <li><a href="index.html">Home 🏠</a></li>
+        <li><a href="index.html#invoice-studio">Invoice Studio 📄</a></li>
+        <li><a href="index.html#chatbox">Chat 💬</a></li>
+        <li><a href="downloads.html">Free Downloads 📦</a></li>
+        <li><a href="quizzes.html">Quizzes 🎯</a></li>
+        <li><a href="data-resources.html">Data Science 📊</a></li>
+        <li><a href="datasets.html">Free Datasets 📁</a></li>
+        <li><a href="index.html#about">About 👤</a></li>
+        <li><a href="index.html#contact">Contact ✉️</a></li>
       </ul>
 
-      <!-- Search Form -->
-      <form id="search-form" style="margin-left: auto; display: flex; gap: 5px; flex-wrap: wrap;">
-        <input type="text" id="search-input" placeholder="Search apps or sections..." />
-        <button type="submit">🔍</button>
+      <form id="search-form" class="nav-search" role="search">
+        <label class="sr-only" for="search-input">Search the site</label>
+        <input type="search" id="search-input" placeholder="Search YG-Tech..." autocomplete="off" />
+        <button type="submit" aria-label="Search">🔍</button>
       </form>
     </div>
   </div>
 </nav>
-

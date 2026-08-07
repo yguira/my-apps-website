@@ -588,5 +588,4 @@ input.addEventListener("keydown", event => {
   }
 });
 
-// Put the cursor in the input when the page loads
-input.focus();
+

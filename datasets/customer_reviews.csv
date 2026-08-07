@@ -1,0 +1,61 @@
+Review_ID,Review_Date,Product_or_Service,Rating_1_to_5,Sentiment,Review_Text
+R0001,2025-01-04,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0002,2025-01-07,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0003,2025-01-10,Website Package,4,Positive,Good value and the workflow was clear.
+R0004,2025-01-13,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0005,2025-01-16,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0006,2025-02-19,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0007,2025-02-22,Network Setup,3,Neutral,Solid experience with a small learning curve.
+R0008,2025-02-25,Website Package,2,Negative,I would prefer a simpler way to change some options.
+R0009,2025-02-01,Support Plan,3,Neutral,Useful overall; I would like a few more customization options.
+R0010,2025-02-04,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0011,2025-03-07,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0012,2025-03-10,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0013,2025-03-13,Website Package,4,Positive,Good value and the workflow was clear.
+R0014,2025-03-16,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0015,2025-03-19,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0016,2025-04-22,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0017,2025-04-25,Network Setup,3,Neutral,Useful overall; I would like a few more customization options.
+R0018,2025-04-01,Website Package,2,Negative,I had trouble finding one of the settings at first.
+R0019,2025-04-04,Support Plan,3,Neutral,Solid experience with a small learning curve.
+R0020,2025-04-07,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0021,2025-05-10,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0022,2025-05-13,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0023,2025-05-16,Website Package,4,Positive,Good value and the workflow was clear.
+R0024,2025-05-19,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0025,2025-05-22,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0026,2025-06-25,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0027,2025-06-01,Network Setup,3,Neutral,Solid experience with a small learning curve.
+R0028,2025-06-04,Website Package,2,Negative,The first attempt took longer than I expected.
+R0029,2025-06-07,Support Plan,3,Neutral,Useful overall; I would like a few more customization options.
+R0030,2025-06-10,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0031,2025-07-13,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0032,2025-07-16,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0033,2025-07-19,Website Package,4,Positive,Good value and the workflow was clear.
+R0034,2025-07-22,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0035,2025-07-25,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0036,2025-08-01,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0037,2025-08-04,Network Setup,3,Neutral,Useful overall; I would like a few more customization options.
+R0038,2025-08-07,Website Package,2,Negative,I would prefer a simpler way to change some options.
+R0039,2025-08-10,Support Plan,3,Neutral,Solid experience with a small learning curve.
+R0040,2025-08-13,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0041,2025-09-16,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0042,2025-09-19,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0043,2025-09-22,Website Package,4,Positive,Good value and the workflow was clear.
+R0044,2025-09-25,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0045,2025-09-01,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0046,2025-10-04,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0047,2025-10-07,Network Setup,3,Neutral,Solid experience with a small learning curve.
+R0048,2025-10-10,Website Package,2,Negative,I had trouble finding one of the settings at first.
+R0049,2025-10-13,Support Plan,3,Neutral,Useful overall; I would like a few more customization options.
+R0050,2025-10-16,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0051,2025-11-19,Field Service Kit,4,Positive,The setup was simple and the results looked professional.
+R0052,2025-11-22,Network Setup,4,Positive,Very useful for keeping my work organized.
+R0053,2025-11-25,Website Package,4,Positive,Good value and the workflow was clear.
+R0054,2025-11-01,Support Plan,5,Positive,The export feature worked exactly as expected.
+R0055,2025-11-04,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.
+R0056,2025-12-07,Field Service Kit,5,Positive,The setup was simple and the results looked professional.
+R0057,2025-12-10,Network Setup,3,Neutral,Useful overall; I would like a few more customization options.
+R0058,2025-12-13,Website Package,2,Negative,The first attempt took longer than I expected.
+R0059,2025-12-16,Support Plan,3,Neutral,Solid experience with a small learning curve.
+R0060,2025-12-19,Invoice Studio,5,Positive,Easy to use and saved me a lot of time.

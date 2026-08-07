@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- =========================================================
        HEADER
   ========================================================== -->
-  <header class="site-header">
+  <header id="home" class="site-header">
     <div class="header-content">
       <p class="brand-label">YG-TECH SOFTWARE</p>
 
@@ -65,6 +65,13 @@
       <p class="product-tagline">
         Professional invoicing made simple.
       </p>
+
+      <div class="availability-row" aria-label="Available platforms">
+        <span>📱 Android 8+</span>
+        <span>🖥️ Windows 10 / 11</span>
+        <span>🌍 English &amp; French</span>
+        <span>🔒 Offline-first</span>
+      </div>
 
       <p class="product-description">
         Create professional invoices, save customer information, scan receipts,
@@ -158,6 +165,121 @@
 
 
       <!-- =====================================================
+           ACTUAL APP SCREENSHOTS
+      ====================================================== -->
+      <section class="screenshot-showcase" aria-labelledby="screenshots-heading">
+        <div class="showcase-heading">
+          <div>
+            <span class="showcase-kicker">Actual app screenshots</span>
+            <h3 id="screenshots-heading">See Invoice Studio in action</h3>
+          </div>
+          <p>
+            These are real screenshots from the Android and Windows editions.
+            Select any image to view it at full size.
+          </p>
+        </div>
+
+        <div class="screenshot-group">
+          <div class="screenshot-group-heading">
+            <div>
+              <span class="platform-dot android-dot" aria-hidden="true"></span>
+              <h4>Android</h4>
+            </div>
+            <span>Mobile invoicing, customer management, receipt scanning and export tools</span>
+          </div>
+
+          <div class="screenshot-rail android-screenshots" aria-label="Android screenshots">
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/welcome-language.jpg" data-gallery-alt="Invoice Studio Android bilingual welcome and language selection screen">
+                <img src="images/invoice-studio/android/welcome-language.jpg" alt="Invoice Studio Android bilingual welcome screen" loading="lazy" />
+              </button>
+              <figcaption>Bilingual setup</figcaption>
+            </figure>
+
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/customer-management.jpg" data-gallery-alt="Invoice Studio Android customer management screen">
+                <img src="images/invoice-studio/android/customer-management.jpg" alt="Invoice Studio Android customer management screen" loading="lazy" />
+              </button>
+              <figcaption>Customer management</figcaption>
+            </figure>
+
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/business-setup.jpg" data-gallery-alt="Invoice Studio Android business profile setup screen">
+                <img src="images/invoice-studio/android/business-setup.jpg" alt="Invoice Studio Android business profile setup screen" loading="lazy" />
+              </button>
+              <figcaption>Business profile</figcaption>
+            </figure>
+
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/currency-selection.jpg" data-gallery-alt="Invoice Studio Android currency selection screen showing international currencies including XOF and XAF">
+                <img src="images/invoice-studio/android/currency-selection.jpg" alt="Invoice Studio Android multiple currency selection screen" loading="lazy" />
+              </button>
+              <figcaption>Multiple currencies</figcaption>
+            </figure>
+
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/create-invoice.jpg" data-gallery-alt="Invoice Studio Android create invoice screen with customer details and receipt scanning">
+                <img src="images/invoice-studio/android/create-invoice.jpg" alt="Invoice Studio Android create invoice and receipt scan screen" loading="lazy" />
+              </button>
+              <figcaption>Create &amp; scan</figcaption>
+            </figure>
+
+            <figure class="screenshot-card phone-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/android/export-and-print.jpg" data-gallery-alt="Invoice Studio Android invoice totals and export controls">
+                <img src="images/invoice-studio/android/export-and-print.jpg" alt="Invoice Studio Android PDF CSV share and print controls" loading="lazy" />
+              </button>
+              <figcaption>Export, share &amp; print</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="screenshot-group windows-group">
+          <div class="screenshot-group-heading">
+            <div>
+              <span class="platform-dot windows-dot" aria-hidden="true"></span>
+              <h4>Windows</h4>
+            </div>
+            <span>Desktop dashboard, invoice workspace and professional PDF output</span>
+          </div>
+
+          <div class="screenshot-rail desktop-screenshots" aria-label="Windows screenshots">
+            <figure class="screenshot-card desktop-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/windows/dashboard.png" data-gallery-alt="Invoice Studio Windows dashboard with invoice totals and recent invoices">
+                <img src="images/invoice-studio/windows/dashboard.png" alt="Invoice Studio Windows dashboard" loading="lazy" />
+              </button>
+              <figcaption>Business dashboard</figcaption>
+            </figure>
+
+            <figure class="screenshot-card desktop-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/windows/new-invoice.png" data-gallery-alt="Invoice Studio Windows new invoice workspace">
+                <img src="images/invoice-studio/windows/new-invoice.png" alt="Invoice Studio Windows new invoice workspace" loading="lazy" />
+              </button>
+              <figcaption>Invoice workspace</figcaption>
+            </figure>
+
+            <figure class="screenshot-card desktop-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/windows/invoice-workspace.png" data-gallery-alt="Invoice Studio Windows populated invoice workspace with customer and item details">
+                <img src="images/invoice-studio/windows/invoice-workspace.png" alt="Invoice Studio Windows populated invoice workspace" loading="lazy" />
+              </button>
+              <figcaption>Itemized billing</figcaption>
+            </figure>
+
+            <figure class="screenshot-card desktop-shot">
+              <button class="screenshot-button" type="button" data-gallery-image="images/invoice-studio/windows/generated-pdf.png" data-gallery-alt="Professional PDF invoice generated by Invoice Studio for Windows">
+                <img src="images/invoice-studio/windows/generated-pdf.png" alt="Professional PDF invoice generated by Invoice Studio for Windows" loading="lazy" />
+              </button>
+              <figcaption>Professional PDF output</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p class="screenshot-note">
+          Screenshots show the current product interface. Minor visual differences can occur between devices,
+          display settings, and future maintenance releases.
+        </p>
+      </section>
+
+      <!-- =====================================================
            DOWNLOAD OPTIONS
       ====================================================== -->
       <div class="download-platforms">
@@ -175,22 +297,10 @@
 
             <h3>Invoice Studio for Android</h3>
 
-            <p>
-              The newest version of Invoice Studio, designed specifically for
-              phones and tablets.
+            <p class="platform-intro">
+              Create, manage, scan, export, and share professional invoices from
+              your Android phone or tablet — with English/French support and no account required.
             </p>
-
-            <ul class="platform-features">
-              <li>✓ Receipt scanning</li>
-              <li>✓ Customer database</li>
-              <li>✓ Invoice history</li>
-              <li>✓ PDF export</li>
-              <li>✓ CSV export</li>
-              <li>✓ Print and share invoices</li>
-              <li>✓ English & French interface</li>
-              <li>✓ Company logo support</li>
-              <li>✓ Multiple currencies</li>
-            </ul>
 
             <p class="app-meta">
               Version 1.0.0 &bull; Android 8.0 or newer
@@ -203,15 +313,41 @@
               📱 Download for Android
             </a>
 
-            <p class="download-note">
-              This application is downloaded directly from YG-Tech. Android
-              may ask you to allow installation from your browser or file
-              manager before installation.
-            </p>
+            <details class="platform-details">
+              <summary>Features &amp; installation notes</summary>
+              <div class="platform-details-content">
+                <ul class="platform-features">
+                  <li>✓ Receipt scanning</li>
+                  <li>✓ Customer database</li>
+                  <li>✓ Invoice history</li>
+                  <li>✓ PDF export</li>
+                  <li>✓ CSV export</li>
+                  <li>✓ Print and share invoices</li>
+                  <li>✓ English &amp; French interface</li>
+                  <li>✓ Company logo support</li>
+                  <li>✓ Multiple currencies</li>
+                </ul>
 
-            <p class="coming-soon">
-              🚀 Google Play release coming soon.
-            </p>
+                <p class="download-note">
+                  This application is downloaded directly from YG-Tech. Android
+                  may ask you to allow installation from your browser or file
+                  manager before installation.
+                </p>
+
+                <a
+                  href="https://github.com/yguira/Invoice-Studio-Releases/releases/tag/v1.0.0"
+                  class="release-details-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View v1.0.0 release details ↗
+                </a>
+
+                <p class="coming-soon">
+                  🚀 Google Play release planned.
+                </p>
+              </div>
+            </details>
 
           </div>
         </article>
@@ -230,23 +366,13 @@
 
             <h3>Invoice Studio for Windows</h3>
 
-            <p>
-              The desktop edition of Invoice Studio for Windows computers.
-              Quickly create professional invoices using a straightforward
-              desktop interface.
+            <p class="platform-intro">
+              Create professional invoices from a full desktop workspace with
+              customer records, itemized billing, exports, and local invoice history.
             </p>
 
-            <ul class="platform-features">
-              <li>✓ Professional invoice creation</li>
-              <li>✓ Customer information</li>
-              <li>✓ Itemized products and services</li>
-              <li>✓ Automatic totals</li>
-              <li>✓ PDF invoice generation</li>
-              <li>✓ Business-friendly interface</li>
-            </ul>
-
             <p class="app-meta">
-              Version 1.0 &bull; Windows 10 and 11
+              Version 2.1.0 &bull; Windows 10 and 11
             </p>
 
             <a
@@ -257,18 +383,32 @@
               🖥️ Download for Windows
             </a>
 
-            <p class="download-note">
-              Download and extract the complete ZIP file before opening the
-              application. Keep the application and the
-              <strong>_internal</strong> folder together.
-            </p>
+            <details class="platform-details">
+              <summary>Features &amp; installation notes</summary>
+              <div class="platform-details-content">
+                <ul class="platform-features">
+                  <li>✓ Professional invoice creation</li>
+                  <li>✓ Customer information</li>
+                  <li>✓ Itemized products and services</li>
+                  <li>✓ Automatic totals</li>
+                  <li>✓ PDF invoice generation</li>
+                  <li>✓ Business-friendly interface</li>
+                </ul>
 
-            <p class="download-note">
-              Windows may display a security warning because this independently
-              developed application is not digitally signed. If an
-              <strong>Unblock</strong> option appears in the ZIP file's
-              Properties window, select it before extracting the files.
-            </p>
+                <p class="download-note">
+                  Download and extract the complete ZIP file before opening the
+                  application. Keep the application and the
+                  <strong>_internal</strong> folder together.
+                </p>
+
+                <p class="download-note">
+                  Windows may display a security warning because this independently
+                  developed application is not digitally signed. If an
+                  <strong>Unblock</strong> option appears in the ZIP file's
+                  Properties window, select it before extracting the files.
+                </p>
+              </div>
+            </details>
 
           </div>
         </article>
@@ -723,9 +863,23 @@
 
 
   <!-- =========================================================
+       SCREENSHOT LIGHTBOX
+  ========================================================== -->
+  <div id="screenshot-lightbox" class="screenshot-lightbox" aria-hidden="true">
+    <button class="lightbox-backdrop" type="button" data-lightbox-close aria-label="Close screenshot viewer"></button>
+
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Invoice Studio screenshot viewer">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close screenshot viewer">×</button>
+      <img id="lightbox-image" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- =========================================================
        EXTERNAL SCRIPTS
   ========================================================== -->
   <script src="navbar-fix.js"></script>
+  <script src="gallery.js"></script>
   <script src="chat.js"></script>
 
 

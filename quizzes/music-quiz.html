@@ -9,35 +9,49 @@
 <body>
 
   <header>
-    <h1>🎵 Music Mania</h1>
+    <h1 id="quiz-title">🎵 Music Mania</h1>
+    <p id="quiz-subtitle">10 random questions. Different challenge every time.</p>
   </header>
 
-  <!-- Navbar placeholder -->
   <div id="navbar"></div>
 
-
   <main>
-    <section id="quiz-container">
+    <section id="quiz-container" class="quiz-play-area">
       <div id="question-box">
+        <div class="quiz-top-bar">
+          <div id="quiz-progress">Question 1 of 10</div>
+          <div id="quiz-category">Quiz</div>
+        </div>
+
+        <div id="streak-display" aria-live="polite"></div>
+
         <h2 id="question">Question will appear here...</h2>
         <div id="choices"></div>
       </div>
 
-      <div id="feedback"></div>
+      <div id="quiz-timer" aria-live="polite"></div>
+      <div id="feedback" class="quiz-feedback" aria-live="polite"></div>
 
-      <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+      <div class="quiz-controls">
+        <button id="fifty-btn" type="button" class="quiz-button">
+          🎯 50/50 Lifeline
+        </button>
+
+        <button id="next-btn" type="button" class="quiz-button" disabled>
+          Next
+        </button>
+      </div>
 
       <div id="score-box" style="display: none;"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
+    <p>&copy; 2026 My Apps | Built with ❤️ by Me</p>
   </footer>
 
-  <script src="navbar-fix.js"></script>
-
-
-  <script src="music-quiz.js"></script>
+  <script src="../navbar-fix.js"></script>
+  <script src="music-data.js"></script>
+  <script src="../js/quiz-engine.js"></script>
 </body>
 </html>

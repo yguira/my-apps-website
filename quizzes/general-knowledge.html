@@ -2,41 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>General Knowledge Quiz</title>
+
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .quiz-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    #quiz-progress {
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+
+    #quiz-category {
+      font-size: 0.9rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: #e0e7ff;
+      color: #1e3a8a;
+    }
+
+    #streak-display {
+      min-height: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    #feedback {
+      min-height: 32px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .quiz-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    #fifty-btn {
+      background-color: #7c3aed;
+    }
+
+    #fifty-btn:hover {
+      background-color: #6d28d9;
+    }
+
+    #fifty-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .correct-answer {
+      background-color: #16a34a !important;
+      color: white !important;
+    }
+
+    .wrong-answer {
+      background-color: #dc2626 !important;
+      color: white !important;
+    }
+
+    #score-box {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .final-score {
+      font-size: 1.3rem;
+      margin: 15px 0;
+    }
+
+    .quiz-rank {
+      font-size: 1.15rem;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .quiz-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .quiz-controls {
+        flex-direction: column;
+      }
+
+      .quiz-controls button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  
-    <header>
-      <h1>🧠 General Knowledge Quiz</h1>
-    </header>
+
+  <header>
+    <h1>🧠 General Knowledge Quiz</h1>
+    <p>
+      10 random questions. New challenge every time.
+    </p>
+  </header>
 
   <!-- Navbar placeholder -->
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
+  <main>
 
-    
-    <main>
-      <section id="quiz-container">
-        <!-- Quiz UI -->
-        <div id="question-box">
-          <h2 id="question">Question will appear here...</h2>
-          <div id="choices"></div>
+    <section id="quiz-container">
+
+      <div id="question-box">
+
+        <div class="quiz-top-bar">
+          <div id="quiz-progress">
+            Question 1 of 10
+          </div>
+
+          <div id="quiz-category">
+            General Knowledge
+          </div>
         </div>
 
-        <div id="feedback"></div>
+        <div id="streak-display"></div>
 
-        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+        <h2 id="question">
+          Question will appear here...
+        </h2>
 
-        <div id="score-box" style="display: none;"></div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 My Apps | Built with ❤️ by Me</p>
-    </footer>
+        <div id="choices"></div>
+
+      </div>
+
+      <div id="feedback"></div>
+
+      <div class="quiz-controls">
+
+        <button
+          id="fifty-btn"
+          class="quiz-button"
+          onclick="useFiftyFifty()"
+        >
+          🎯 50/50 Lifeline
+        </button>
+
+        <button
+          id="next-btn"
+          class="quiz-button"
+          onclick="nextQuestion()"
+          disabled
+        >
+          Next
+        </button>
+
+      </div>
+
+      <div
+        id="score-box"
+        style="display: none;"
+      ></div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 My Apps | Built with ❤️ by Me
+    </p>
+  </footer>
+
   <script src="navbar-fix.js"></script>
-
   <script src="quiz1.js"></script>
+
 </body>
 </html>

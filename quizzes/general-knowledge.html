@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧠 General Knowledge Quiz</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="quiz-page">
+
+  <header>
+    <h1 id="quiz-title">🧠 General Knowledge Quiz</h1>
+    <p id="quiz-subtitle">10 random questions. Different challenge every time.</p>
+  </header>
+
+  <div id="navbar"></div>
+
+  <main>
+    <section id="quiz-container" class="quiz-play-area">
+      <div id="question-box">
+        <div class="quiz-top-bar">
+          <div id="quiz-progress">Question 1 of 10</div>
+          <div id="quiz-category">Quiz</div>
+        </div>
+
+        <div id="streak-display" aria-live="polite"></div>
+
+        <h2 id="question">Question will appear here...</h2>
+        <div id="choices"></div>
+      </div>
+
+      <div id="quiz-timer" aria-live="polite"></div>
+      <div id="feedback" class="quiz-feedback" aria-live="polite"></div>
+
+      <div class="quiz-controls">
+        <button id="fifty-btn" type="button" class="quiz-button">
+          🎯 50/50 Lifeline
+        </button>
+
+        <button id="next-btn" type="button" class="quiz-button" disabled>
+          Next
+        </button>
+      </div>
+
+      <div id="score-box" style="display: none;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 YG-Tech. All Rights Reserved.</p>
+    <p class="footer-tagline">Useful technology for work, learning, and everyday problem-solving.</p>
+    <p class="footer-links"><a href="../support.html">Support</a> &bull; <a href="../privacy.html">Privacy</a> &bull; <a href="../terms.html">Terms</a> &bull; <a href="../changelog.html">Release Notes</a></p>
+</footer>
+
+  <script src="../navbar-fix.js"></script>
+  <script src="general-knowledge-data.js"></script>
+  <script src="../js/quiz-engine.js"></script>
+</body>
+</html>

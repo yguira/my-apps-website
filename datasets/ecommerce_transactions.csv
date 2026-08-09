@@ -1,0 +1,121 @@
+Order_ID,Order_Date,Customer_Segment,Region,Product_Category,Quantity,Unit_Price_USD,Discount_Percent,Shipping_Method,Order_Total_USD
+ORD-1001,2025-01-06,Individual,West,Software,8,59.00,0,Express,472.00
+ORD-1002,2025-01-11,Nonprofit,South,Installation,7,110.00,5,Pickup,731.50
+ORD-1003,2025-01-16,Contractor,Northeast,Support,6,45.00,10,Standard,243.00
+ORD-1004,2025-01-21,Small Business,Midwest,Hardware,5,24.99,15,Express,106.21
+ORD-1005,2025-01-26,Individual,West,Software,4,59.00,0,Pickup,236.00
+ORD-1006,2025-01-04,Nonprofit,South,Installation,3,110.00,0,Standard,330.00
+ORD-1007,2025-01-09,Contractor,Northeast,Support,2,45.00,5,Express,85.50
+ORD-1008,2025-01-14,Small Business,Midwest,Hardware,1,24.99,10,Pickup,22.49
+ORD-1009,2025-01-19,Individual,West,Software,8,59.00,15,Standard,401.20
+ORD-1010,2025-01-24,Nonprofit,South,Installation,7,110.00,0,Express,770.00
+ORD-1011,2025-02-02,Contractor,Northeast,Support,6,45.00,0,Pickup,270.00
+ORD-1012,2025-02-07,Small Business,Midwest,Hardware,5,24.99,5,Standard,118.70
+ORD-1013,2025-02-12,Individual,West,Software,4,59.00,10,Express,212.40
+ORD-1014,2025-02-17,Nonprofit,South,Installation,3,110.00,15,Pickup,280.50
+ORD-1015,2025-02-22,Contractor,Northeast,Support,2,45.00,0,Standard,90.00
+ORD-1016,2025-02-27,Small Business,Midwest,Hardware,1,24.99,0,Express,24.99
+ORD-1017,2025-02-05,Individual,West,Software,8,59.00,5,Pickup,448.40
+ORD-1018,2025-02-10,Nonprofit,South,Installation,7,110.00,10,Standard,693.00
+ORD-1019,2025-02-15,Contractor,Northeast,Support,6,45.00,15,Express,229.50
+ORD-1020,2025-02-20,Small Business,Midwest,Hardware,5,24.99,0,Pickup,124.95
+ORD-1021,2025-03-25,Individual,West,Software,4,59.00,0,Standard,236.00
+ORD-1022,2025-03-03,Nonprofit,South,Installation,3,110.00,5,Express,313.50
+ORD-1023,2025-03-08,Contractor,Northeast,Support,2,45.00,10,Pickup,81.00
+ORD-1024,2025-03-13,Small Business,Midwest,Hardware,1,24.99,15,Standard,21.24
+ORD-1025,2025-03-18,Individual,West,Software,8,59.00,0,Express,472.00
+ORD-1026,2025-03-23,Nonprofit,South,Installation,7,110.00,0,Pickup,770.00
+ORD-1027,2025-03-01,Contractor,Northeast,Support,6,45.00,5,Standard,256.50
+ORD-1028,2025-03-06,Small Business,Midwest,Hardware,5,24.99,10,Express,112.45
+ORD-1029,2025-03-11,Individual,West,Software,4,59.00,15,Pickup,200.60
+ORD-1030,2025-03-16,Nonprofit,South,Installation,3,110.00,0,Standard,330.00
+ORD-1031,2025-04-21,Contractor,Northeast,Support,2,45.00,0,Express,90.00
+ORD-1032,2025-04-26,Small Business,Midwest,Hardware,1,24.99,5,Pickup,23.74
+ORD-1033,2025-04-04,Individual,West,Software,8,59.00,10,Standard,424.80
+ORD-1034,2025-04-09,Nonprofit,South,Installation,7,110.00,15,Express,654.50
+ORD-1035,2025-04-14,Contractor,Northeast,Support,6,45.00,0,Pickup,270.00
+ORD-1036,2025-04-19,Small Business,Midwest,Hardware,5,24.99,0,Standard,124.95
+ORD-1037,2025-04-24,Individual,West,Software,4,59.00,5,Express,224.20
+ORD-1038,2025-04-02,Nonprofit,South,Installation,3,110.00,10,Pickup,297.00
+ORD-1039,2025-04-07,Contractor,Northeast,Support,2,45.00,15,Standard,76.50
+ORD-1040,2025-04-12,Small Business,Midwest,Hardware,1,24.99,0,Express,24.99
+ORD-1041,2025-05-17,Individual,West,Software,8,59.00,0,Pickup,472.00
+ORD-1042,2025-05-22,Nonprofit,South,Installation,7,110.00,5,Standard,731.50
+ORD-1043,2025-05-27,Contractor,Northeast,Support,6,45.00,10,Express,243.00
+ORD-1044,2025-05-05,Small Business,Midwest,Hardware,5,24.99,15,Pickup,106.21
+ORD-1045,2025-05-10,Individual,West,Software,4,59.00,0,Standard,236.00
+ORD-1046,2025-05-15,Nonprofit,South,Installation,3,110.00,0,Express,330.00
+ORD-1047,2025-05-20,Contractor,Northeast,Support,2,45.00,5,Pickup,85.50
+ORD-1048,2025-05-25,Small Business,Midwest,Hardware,1,24.99,10,Standard,22.49
+ORD-1049,2025-05-03,Individual,West,Software,8,59.00,15,Express,401.20
+ORD-1050,2025-05-08,Nonprofit,South,Installation,7,110.00,0,Pickup,770.00
+ORD-1051,2025-06-13,Contractor,Northeast,Support,6,45.00,0,Standard,270.00
+ORD-1052,2025-06-18,Small Business,Midwest,Hardware,5,24.99,5,Express,118.70
+ORD-1053,2025-06-23,Individual,West,Software,4,59.00,10,Pickup,212.40
+ORD-1054,2025-06-01,Nonprofit,South,Installation,3,110.00,15,Standard,280.50
+ORD-1055,2025-06-06,Contractor,Northeast,Support,2,45.00,0,Express,90.00
+ORD-1056,2025-06-11,Small Business,Midwest,Hardware,1,24.99,0,Pickup,24.99
+ORD-1057,2025-06-16,Individual,West,Software,8,59.00,5,Standard,448.40
+ORD-1058,2025-06-21,Nonprofit,South,Installation,7,110.00,10,Express,693.00
+ORD-1059,2025-06-26,Contractor,Northeast,Support,6,45.00,15,Pickup,229.50
+ORD-1060,2025-06-04,Small Business,Midwest,Hardware,5,24.99,0,Standard,124.95
+ORD-1061,2025-07-09,Individual,West,Software,4,59.00,0,Express,236.00
+ORD-1062,2025-07-14,Nonprofit,South,Installation,3,110.00,5,Pickup,313.50
+ORD-1063,2025-07-19,Contractor,Northeast,Support,2,45.00,10,Standard,81.00
+ORD-1064,2025-07-24,Small Business,Midwest,Hardware,1,24.99,15,Express,21.24
+ORD-1065,2025-07-02,Individual,West,Software,8,59.00,0,Pickup,472.00
+ORD-1066,2025-07-07,Nonprofit,South,Installation,7,110.00,0,Standard,770.00
+ORD-1067,2025-07-12,Contractor,Northeast,Support,6,45.00,5,Express,256.50
+ORD-1068,2025-07-17,Small Business,Midwest,Hardware,5,24.99,10,Pickup,112.45
+ORD-1069,2025-07-22,Individual,West,Software,4,59.00,15,Standard,200.60
+ORD-1070,2025-07-27,Nonprofit,South,Installation,3,110.00,0,Express,330.00
+ORD-1071,2025-08-05,Contractor,Northeast,Support,2,45.00,0,Pickup,90.00
+ORD-1072,2025-08-10,Small Business,Midwest,Hardware,1,24.99,5,Standard,23.74
+ORD-1073,2025-08-15,Individual,West,Software,8,59.00,10,Express,424.80
+ORD-1074,2025-08-20,Nonprofit,South,Installation,7,110.00,15,Pickup,654.50
+ORD-1075,2025-08-25,Contractor,Northeast,Support,6,45.00,0,Standard,270.00
+ORD-1076,2025-08-03,Small Business,Midwest,Hardware,5,24.99,0,Express,124.95
+ORD-1077,2025-08-08,Individual,West,Software,4,59.00,5,Pickup,224.20
+ORD-1078,2025-08-13,Nonprofit,South,Installation,3,110.00,10,Standard,297.00
+ORD-1079,2025-08-18,Contractor,Northeast,Support,2,45.00,15,Express,76.50
+ORD-1080,2025-08-23,Small Business,Midwest,Hardware,1,24.99,0,Pickup,24.99
+ORD-1081,2025-09-01,Individual,West,Software,8,59.00,0,Standard,472.00
+ORD-1082,2025-09-06,Nonprofit,South,Installation,7,110.00,5,Express,731.50
+ORD-1083,2025-09-11,Contractor,Northeast,Support,6,45.00,10,Pickup,243.00
+ORD-1084,2025-09-16,Small Business,Midwest,Hardware,5,24.99,15,Standard,106.21
+ORD-1085,2025-09-21,Individual,West,Software,4,59.00,0,Express,236.00
+ORD-1086,2025-09-26,Nonprofit,South,Installation,3,110.00,0,Pickup,330.00
+ORD-1087,2025-09-04,Contractor,Northeast,Support,2,45.00,5,Standard,85.50
+ORD-1088,2025-09-09,Small Business,Midwest,Hardware,1,24.99,10,Express,22.49
+ORD-1089,2025-09-14,Individual,West,Software,8,59.00,15,Pickup,401.20
+ORD-1090,2025-09-19,Nonprofit,South,Installation,7,110.00,0,Standard,770.00
+ORD-1091,2025-10-24,Contractor,Northeast,Support,6,45.00,0,Express,270.00
+ORD-1092,2025-10-02,Small Business,Midwest,Hardware,5,24.99,5,Pickup,118.70
+ORD-1093,2025-10-07,Individual,West,Software,4,59.00,10,Standard,212.40
+ORD-1094,2025-10-12,Nonprofit,South,Installation,3,110.00,15,Express,280.50
+ORD-1095,2025-10-17,Contractor,Northeast,Support,2,45.00,0,Pickup,90.00
+ORD-1096,2025-10-22,Small Business,Midwest,Hardware,1,24.99,0,Standard,24.99
+ORD-1097,2025-10-27,Individual,West,Software,8,59.00,5,Express,448.40
+ORD-1098,2025-10-05,Nonprofit,South,Installation,7,110.00,10,Pickup,693.00
+ORD-1099,2025-10-10,Contractor,Northeast,Support,6,45.00,15,Standard,229.50
+ORD-1100,2025-10-15,Small Business,Midwest,Hardware,5,24.99,0,Express,124.95
+ORD-1101,2025-11-20,Individual,West,Software,4,59.00,0,Pickup,236.00
+ORD-1102,2025-11-25,Nonprofit,South,Installation,3,110.00,5,Standard,313.50
+ORD-1103,2025-11-03,Contractor,Northeast,Support,2,45.00,10,Express,81.00
+ORD-1104,2025-11-08,Small Business,Midwest,Hardware,1,24.99,15,Pickup,21.24
+ORD-1105,2025-11-13,Individual,West,Software,8,59.00,0,Standard,472.00
+ORD-1106,2025-11-18,Nonprofit,South,Installation,7,110.00,0,Express,770.00
+ORD-1107,2025-11-23,Contractor,Northeast,Support,6,45.00,5,Pickup,256.50
+ORD-1108,2025-11-01,Small Business,Midwest,Hardware,5,24.99,10,Standard,112.45
+ORD-1109,2025-11-06,Individual,West,Software,4,59.00,15,Express,200.60
+ORD-1110,2025-11-11,Nonprofit,South,Installation,3,110.00,0,Pickup,330.00
+ORD-1111,2025-12-16,Contractor,Northeast,Support,2,45.00,0,Standard,90.00
+ORD-1112,2025-12-21,Small Business,Midwest,Hardware,1,24.99,5,Express,23.74
+ORD-1113,2025-12-26,Individual,West,Software,8,59.00,10,Pickup,424.80
+ORD-1114,2025-12-04,Nonprofit,South,Installation,7,110.00,15,Standard,654.50
+ORD-1115,2025-12-09,Contractor,Northeast,Support,6,45.00,0,Express,270.00
+ORD-1116,2025-12-14,Small Business,Midwest,Hardware,5,24.99,0,Pickup,124.95
+ORD-1117,2025-12-19,Individual,West,Software,4,59.00,5,Standard,224.20
+ORD-1118,2025-12-24,Nonprofit,South,Installation,3,110.00,10,Express,297.00
+ORD-1119,2025-12-02,Contractor,Northeast,Support,2,45.00,15,Pickup,76.50
+ORD-1120,2025-12-07,Small Business,Midwest,Hardware,1,24.99,0,Standard,24.99

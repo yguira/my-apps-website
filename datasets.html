@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Free Dataset Resources | YG-Tech Software</title>
+
+  <meta
+    name="description"
+    content="Explore free datasets for machine learning, data science, business analysis, economics, health, climate, government, and other practice projects."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar loaded by navbar-fix.js -->
+  <div id="navbar"></div>
+
+  <main class="datasets-page">
+
+    <!-- Page introduction -->
+    <section class="datasets-hero">
+      <span class="datasets-label">Data Learning Resources</span>
+
+      <h1>📁 Free Practice Datasets</h1>
+
+      <p>
+        Explore free dataset repositories for data analysis,
+        visualization, machine learning, statistics, and portfolio projects.
+      </p>
+
+      <div class="dataset-search-container">
+        <label for="dataset-search">
+          Search dataset resources
+        </label>
+
+        <input
+          type="search"
+          id="dataset-search"
+          placeholder="Try: finance, health, climate, machine learning..."
+          autocomplete="off"
+        />
+
+        <p id="dataset-result-count" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Your downloadable files -->
+    <section
+      class="dataset-category"
+      data-category="practice csv local beginner"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">⬇️</span>
+          <h2>Downloadable Practice Files</h2>
+        </div>
+
+        <p>
+          Original synthetic CSV files created for practice. They contain no real customer data and may be freely used, modified, and redistributed.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="sales business monthly revenue csv beginner"
+        >
+          <span class="dataset-type">Synthetic CSV</span>
+
+          <h3>Monthly Sales Records</h3>
+
+          <p>
+            Practice sales summaries, revenue trends, charts,
+            pivot tables, and forecasting.
+          </p>
+
+          <div class="dataset-tags">
+            <span>Sales</span>
+            <span>Business</span>
+            <span>Beginner</span>
+          </div>
+
+          <a
+            href="datasets/monthly_sales_records.csv"
+            class="dataset-button"
+            download
+          >
+            Download Dataset
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="customer reviews sentiment text nlp csv beginner"
+        >
+          <span class="dataset-type">Synthetic CSV</span>
+
+          <h3>Customer Reviews</h3>
+
+          <p>
+            Practice text cleaning, customer-feedback analysis,
+            sentiment classification, and visual reporting.
+          </p>
+
+          <div class="dataset-tags">
+            <span>Reviews</span>
+            <span>Text</span>
+            <span>NLP</span>
+          </div>
+
+          <a
+            href="datasets/customer_reviews.csv"
+            class="dataset-button"
+            download
+          >
+            Download Dataset
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="ecommerce transactions retail orders revenue csv"
+        >
+          <span class="dataset-type">Synthetic CSV</span>
+
+          <h3>E-commerce Transactions</h3>
+
+          <p>
+            Analyze purchases, customer behavior, product performance,
+            order totals, and transaction trends.
+          </p>
+
+          <div class="dataset-tags">
+            <span>E-commerce</span>
+            <span>Transactions</span>
+            <span>Retail</span>
+          </div>
+
+          <a
+            href="datasets/ecommerce_transactions.csv"
+            class="dataset-button"
+            download
+          >
+            Download Dataset
+          </a>
+        </article>
+
+      </div>
+
+      <p class="practice-license-note">
+        <strong>Practice data notice:</strong> These three downloadable files are fictional datasets created for YG-Tech learning resources. No real people, customers, or transactions are represented.
+      </p>
+    </section>
+
+    <!-- General repositories -->
+    <section
+      class="dataset-category"
+      data-category="general repositories search open data"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🌐</span>
+          <h2>General Dataset Repositories</h2>
+        </div>
+
+        <p>
+          Large collections covering many subjects and file formats.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="kaggle general machine learning competitions notebooks"
+        >
+          <span class="dataset-type">Repository</span>
+          <h3>Kaggle Datasets</h3>
+          <p>
+            Community datasets for analytics, machine learning,
+            visualization, and competitions.
+          </p>
+
+          <a
+            href="https://www.kaggle.com/datasets"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Kaggle
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="google dataset search discovery research public data"
+        >
+          <span class="dataset-type">Search Engine</span>
+          <h3>Google Dataset Search</h3>
+          <p>
+            Search for datasets published across government,
+            academic, institutional, and public websites.
+          </p>
+
+          <a
+            href="https://datasetsearch.research.google.com/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Search Datasets
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="datahub collections csv finance population climate"
+        >
+          <span class="dataset-type">Repository</span>
+          <h3>DataHub Collections</h3>
+          <p>
+            Curated datasets covering economics, population,
+            finance, geography, and other common subjects.
+          </p>
+
+          <a
+            href="https://datahub.io/collections"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit DataHub
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="registry open data aws cloud public datasets"
+        >
+          <span class="dataset-type">Cloud Data</span>
+          <h3>AWS Open Data Registry</h3>
+          <p>
+            Public datasets available through Amazon Web Services,
+            including scientific and geospatial collections.
+          </p>
+
+          <a
+            href="https://registry.opendata.aws/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse AWS Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="microsoft research open data academic science"
+        >
+          <span class="dataset-type">Research</span>
+          <h3>Microsoft Research Open Data</h3>
+          <p>
+            Research datasets published by Microsoft researchers
+            and collaborating institutions.
+          </p>
+
+          <a
+            href="https://msropendata.com/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Research Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="github awesome public datasets collection list"
+        >
+          <span class="dataset-type">Directory</span>
+          <h3>Awesome Public Datasets</h3>
+          <p>
+            A community-maintained directory organized by topics
+            such as biology, economics, education, and sports.
+          </p>
+
+          <a
+            href="https://github.com/awesomedata/awesome-public-datasets"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Directory
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Machine learning -->
+    <section
+      class="dataset-category"
+      data-category="machine learning artificial intelligence classification regression"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🤖</span>
+          <h2>Machine Learning and AI</h2>
+        </div>
+
+        <p>
+          Datasets for classification, regression, clustering,
+          computer vision, and natural-language processing.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="uci machine learning classification regression clustering"
+        >
+          <span class="dataset-type">Machine Learning</span>
+          <h3>UCI Machine Learning Repository</h3>
+          <p>
+            Classic and modern datasets commonly used for machine-learning
+            education, experiments, and benchmarking.
+          </p>
+
+          <a
+            href="https://archive.ics.uci.edu/datasets"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse UCI
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="openml machine learning benchmarks api python"
+        >
+          <span class="dataset-type">Machine Learning</span>
+          <h3>OpenML</h3>
+          <p>
+            Search, examine, and load machine-learning datasets
+            using the website or supported APIs.
+          </p>
+
+          <a
+            href="https://www.openml.org/search?type=data"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse OpenML
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="tensorflow datasets images text audio machine learning"
+        >
+          <span class="dataset-type">AI Library</span>
+          <h3>TensorFlow Datasets</h3>
+          <p>
+            Ready-to-use datasets for image, text, audio,
+            recommendation, and machine-learning projects.
+          </p>
+
+          <a
+            href="https://www.tensorflow.org/datasets/catalog/overview"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Catalog
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="hugging face datasets nlp text audio vision artificial intelligence"
+        >
+          <span class="dataset-type">AI Repository</span>
+          <h3>Hugging Face Datasets</h3>
+          <p>
+            Datasets for language models, NLP, audio,
+            computer vision, and multimodal AI projects.
+          </p>
+
+          <a
+            href="https://huggingface.co/datasets"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Hugging Face
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="pytorch datasets computer vision images mnist cifar"
+        >
+          <span class="dataset-type">Computer Vision</span>
+          <h3>PyTorch TorchVision Datasets</h3>
+          <p>
+            Common image datasets that can be loaded directly
+            into PyTorch computer-vision projects.
+          </p>
+
+          <a
+            href="https://docs.pytorch.org/vision/stable/datasets.html"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Datasets
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="visualdata computer vision image datasets"
+        >
+          <span class="dataset-type">Directory</span>
+          <h3>VisualData</h3>
+          <p>
+            Searchable collections of datasets for computer vision,
+            image recognition, and related research.
+          </p>
+
+          <a
+            href="https://visualdata.io/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse VisualData
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Government -->
+    <section
+      class="dataset-category"
+      data-category="government public census crime transportation policy"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🏛️</span>
+          <h2>Government and Public Data</h2>
+        </div>
+
+        <p>
+          Public information covering demographics, transportation,
+          spending, communities, policy, and government services.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="united states government public open data federal"
+        >
+          <span class="dataset-type">Government</span>
+          <h3>Data.gov</h3>
+          <p>
+            The central catalog for datasets published by
+            United States federal government agencies.
+          </p>
+
+          <a
+            href="https://data.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Data.gov
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="census population demographics housing income united states"
+        >
+          <span class="dataset-type">Demographics</span>
+          <h3>U.S. Census Data</h3>
+          <p>
+            Population, housing, income, employment,
+            business, and community statistics.
+          </p>
+
+          <a
+            href="https://data.census.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Census Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="bureau labor statistics jobs unemployment wages inflation"
+        >
+          <span class="dataset-type">Labor</span>
+          <h3>U.S. Bureau of Labor Statistics</h3>
+          <p>
+            Employment, unemployment, wages, occupations,
+            productivity, prices, and inflation data.
+          </p>
+
+          <a
+            href="https://www.bls.gov/data/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore BLS Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="fbi crime statistics law enforcement united states"
+        >
+          <span class="dataset-type">Public Safety</span>
+          <h3>FBI Crime Data Explorer</h3>
+          <p>
+            Crime reports, law-enforcement statistics,
+            arrest information, and trend data.
+          </p>
+
+          <a
+            href="https://cde.ucr.cjis.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Crime Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="transportation traffic aviation vehicles roads united states"
+        >
+          <span class="dataset-type">Transportation</span>
+          <h3>U.S. Department of Transportation</h3>
+          <p>
+            Transportation datasets covering aviation,
+            highways, vehicles, transit, and safety.
+          </p>
+
+          <a
+            href="https://data.transportation.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Transportation Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="europe european union open government public data"
+        >
+          <span class="dataset-type">Government</span>
+          <h3>European Data Portal</h3>
+          <p>
+            Public datasets published by European Union institutions
+            and participating European countries.
+          </p>
+
+          <a
+            href="https://data.europa.eu/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse European Data
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Economics and business -->
+    <section
+      class="dataset-category"
+      data-category="economics finance business banking markets development"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">📈</span>
+          <h2>Economics, Finance and Business</h2>
+        </div>
+
+        <p>
+          Resources for economic analysis, financial research,
+          international development, and business intelligence.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="world bank development gdp population poverty global economy"
+        >
+          <span class="dataset-type">Development</span>
+          <h3>World Bank Open Data</h3>
+          <p>
+            Global development indicators including population,
+            poverty, education, health, trade, and economic growth.
+          </p>
+
+          <a
+            href="https://data.worldbank.org/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore World Bank Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="fred federal reserve economic interest rates inflation employment"
+        >
+          <span class="dataset-type">Economics</span>
+          <h3>FRED Economic Data</h3>
+          <p>
+            Economic time-series covering inflation, banking,
+            interest rates, employment, production, and markets.
+          </p>
+
+          <a
+            href="https://fred.stlouisfed.org/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore FRED
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="oecd international economics education employment trade"
+        >
+          <span class="dataset-type">International</span>
+          <h3>OECD Data Explorer</h3>
+          <p>
+            International statistics covering economies,
+            education, employment, trade, government, and society.
+          </p>
+
+          <a
+            href="https://data-explorer.oecd.org/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore OECD Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="international monetary fund imf finance economy exchange rates"
+        >
+          <span class="dataset-type">International Finance</span>
+          <h3>IMF Data</h3>
+          <p>
+            International economic and financial statistics,
+            including exchange rates and macroeconomic indicators.
+          </p>
+
+          <a
+            href="https://data.imf.org/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore IMF Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="sec company filings financial statements public companies"
+        >
+          <span class="dataset-type">Business</span>
+          <h3>SEC EDGAR</h3>
+          <p>
+            Company filings, annual reports, quarterly reports,
+            disclosures, and public-company financial information.
+          </p>
+
+          <a
+            href="https://www.sec.gov/edgar/search/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Search SEC Filings
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="nasdaq stock market finance economic datasets"
+        >
+          <span class="dataset-type">Markets</span>
+          <h3>Nasdaq Data Link</h3>
+          <p>
+            Financial, economic, market, and alternative datasets
+            from various publishers.
+          </p>
+
+          <a
+            href="https://data.nasdaq.com/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Nasdaq Data
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Health -->
+    <section
+      class="dataset-category"
+      data-category="health medicine disease public health healthcare"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🏥</span>
+          <h2>Health and Medicine</h2>
+        </div>
+
+        <p>
+          Public-health statistics, disease information,
+          healthcare indicators, and medical research resources.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="world health organization who global health disease"
+        >
+          <span class="dataset-type">Global Health</span>
+          <h3>World Health Organization Data</h3>
+          <p>
+            Global health indicators covering diseases,
+            mortality, healthcare systems, and population health.
+          </p>
+
+          <a
+            href="https://data.who.int/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore WHO Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="cdc disease public health united states mortality"
+        >
+          <span class="dataset-type">Public Health</span>
+          <h3>CDC Data</h3>
+          <p>
+            United States public-health datasets covering disease,
+            mortality, behavior, injuries, and healthcare.
+          </p>
+
+          <a
+            href="https://data.cdc.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore CDC Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="healthdata global disease burden medical research"
+        >
+          <span class="dataset-type">Health Research</span>
+          <h3>Global Health Data Exchange</h3>
+          <p>
+            Health-related surveys, reports, statistics,
+            and research datasets from around the world.
+          </p>
+
+          <a
+            href="https://ghdx.healthdata.org/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Health Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="medicare medicaid healthcare costs providers cms"
+        >
+          <span class="dataset-type">Healthcare</span>
+          <h3>CMS Data</h3>
+          <p>
+            Medicare, Medicaid, healthcare provider,
+            utilization, payment, and quality datasets.
+          </p>
+
+          <a
+            href="https://data.cms.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse CMS Data
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Environment -->
+    <section
+      class="dataset-category"
+      data-category="climate environment weather ocean earth space agriculture"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🌍</span>
+          <h2>Climate, Environment and Earth Science</h2>
+        </div>
+
+        <p>
+          Weather, satellite, ocean, environmental,
+          agriculture, and Earth-observation data.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="nasa earthdata satellite earth observation climate"
+        >
+          <span class="dataset-type">Earth Science</span>
+          <h3>NASA Earthdata</h3>
+          <p>
+            Satellite imagery and Earth-observation data covering
+            land, oceans, atmosphere, climate, and natural hazards.
+          </p>
+
+          <a
+            href="https://search.earthdata.nasa.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Search NASA Earthdata
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="noaa weather climate ocean atmosphere environmental"
+        >
+          <span class="dataset-type">Weather and Oceans</span>
+          <h3>NOAA Data Discovery</h3>
+          <p>
+            Weather, climate, ocean, fisheries,
+            coastal, atmospheric, and environmental data.
+          </p>
+
+          <a
+            href="https://www.noaa.gov/information-technology/open-data-dissemination"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore NOAA Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="usgs geology earthquake water maps environment"
+        >
+          <span class="dataset-type">Earth Science</span>
+          <h3>USGS Science Data Catalog</h3>
+          <p>
+            Geology, earthquakes, water resources,
+            ecosystems, mapping, and natural-hazard datasets.
+          </p>
+
+          <a
+            href="https://data.usgs.gov/datacatalog/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse USGS Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="environmental protection agency epa air water pollution"
+        >
+          <span class="dataset-type">Environment</span>
+          <h3>EPA Environmental Dataset Gateway</h3>
+          <p>
+            Environmental information covering air,
+            water, pollution, chemicals, facilities, and ecosystems.
+          </p>
+
+          <a
+            href="https://edg.epa.gov/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore EPA Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="food agriculture organization fao crops livestock food"
+        >
+          <span class="dataset-type">Agriculture</span>
+          <h3>FAOSTAT</h3>
+          <p>
+            International statistics on food, agriculture,
+            crops, livestock, trade, land, and production.
+          </p>
+
+          <a
+            href="https://www.fao.org/faostat/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore FAOSTAT
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="copernicus climate european satellite atmosphere ocean"
+        >
+          <span class="dataset-type">Climate</span>
+          <h3>Copernicus Climate Data Store</h3>
+          <p>
+            Climate observations, historical records,
+            projections, atmospheric data, and related tools.
+          </p>
+
+          <a
+            href="https://cds.climate.copernicus.eu/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Climate Data
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Social science -->
+    <section
+      class="dataset-category"
+      data-category="education society research surveys social science"
+    >
+      <div class="dataset-category-heading">
+        <div>
+          <span class="category-icon">🎓</span>
+          <h2>Education and Social Science</h2>
+        </div>
+
+        <p>
+          Research, education, surveys, demographics,
+          social behavior, and public-opinion resources.
+        </p>
+      </div>
+
+      <div class="dataset-grid">
+
+        <article
+          class="dataset-card"
+          data-search="education schools students national center statistics"
+        >
+          <span class="dataset-type">Education</span>
+          <h3>National Center for Education Statistics</h3>
+          <p>
+            Data covering schools, colleges, students,
+            enrollment, graduation, staffing, and education outcomes.
+          </p>
+
+          <a
+            href="https://nces.ed.gov/datatools/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Education Data
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="harvard dataverse research social science academic"
+        >
+          <span class="dataset-type">Academic Research</span>
+          <h3>Harvard Dataverse</h3>
+          <p>
+            Research datasets published by universities,
+            researchers, organizations, and academic projects.
+          </p>
+
+          <a
+            href="https://dataverse.harvard.edu/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Dataverse
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="icpsr social behavioral science research surveys"
+        >
+          <span class="dataset-type">Social Science</span>
+          <h3>ICPSR</h3>
+          <p>
+            Social and behavioral science datasets,
+            surveys, research studies, and documentation.
+          </p>
+
+          <a
+            href="https://www.icpsr.umich.edu/web/pages/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse ICPSR
+          </a>
+        </article>
+
+        <article
+          class="dataset-card"
+          data-search="pew research survey public opinion society"
+        >
+          <span class="dataset-type">Public Opinion</span>
+          <h3>Pew Research Center Datasets</h3>
+          <p>
+            Survey datasets concerning society,
+            public opinion, technology, media, and demographics.
+          </p>
+
+          <a
+            href="https://www.pewresearch.org/download-datasets/"
+            class="dataset-button external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Pew Datasets
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- No results -->
+    <section id="no-dataset-results" hidden>
+      <h2>No matching resources</h2>
+      <p>
+        Try another search term such as
+        <strong>finance</strong>, <strong>health</strong>,
+        <strong>climate</strong>, or <strong>machine learning</strong>.
+      </p>
+    </section>
+
+    <!-- Usage notice -->
+    <section class="dataset-notice">
+      <h2>Before Using a Dataset</h2>
+
+      <p>
+        Review the dataset’s license, documentation, attribution
+        requirements, privacy restrictions, and permitted uses.
+        Availability does not automatically mean that every dataset
+        may be reused without conditions.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 YG-Tech. All Rights Reserved.</p>
+    <p class="footer-tagline">Useful technology for work, learning, and everyday problem-solving.</p>
+    <p class="footer-links"><a href="support.html">Support</a> &bull; <a href="privacy.html">Privacy</a> &bull; <a href="terms.html">Terms</a> &bull; <a href="changelog.html">Release Notes</a></p>
+</footer>
+
+  <script src="navbar-fix.js"></script>
+
+  <script>
+    const datasetSearch = document.getElementById("dataset-search");
+    const datasetCards = Array.from(
+      document.querySelectorAll(".dataset-card")
+    );
+    const datasetCategories = Array.from(
+      document.querySelectorAll(".dataset-category")
+    );
+    const resultCount = document.getElementById(
+      "dataset-result-count"
+    );
+    const noResults = document.getElementById(
+      "no-dataset-results"
+    );
+
+    function filterDatasets() {
+      const searchTerm = datasetSearch.value
+        .trim()
+        .toLowerCase();
+
+      let visibleCards = 0;
+
+      datasetCards.forEach(function (card) {
+        const searchableText = [
+          card.textContent,
+          card.dataset.search || ""
+        ]
+          .join(" ")
+          .toLowerCase();
+
+        const matches = searchableText.includes(searchTerm);
+
+        card.hidden = !matches;
+
+        if (matches) {
+          visibleCards += 1;
+        }
+      });
+
+      datasetCategories.forEach(function (category) {
+        const visibleCategoryCards = category.querySelectorAll(
+          ".dataset-card:not([hidden])"
+        );
+
+        category.hidden = visibleCategoryCards.length === 0;
+      });
+
+      resultCount.textContent = searchTerm
+        ? `${visibleCards} resource${visibleCards === 1 ? "" : "s"} found`
+        : `${datasetCards.length} dataset resources available`;
+
+      noResults.hidden = visibleCards !== 0;
+    }
+
+    datasetSearch.addEventListener("input", filterDatasets);
+
+    filterDatasets();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics | General Math Courses</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📊 Learn Statistics</h1>
+    <p>A beginner-friendly guide to understanding core statistical concepts and how they are used.</p>
+  </header>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <section>
+      <h2>📌 What is Statistics?</h2>
+      <p>
+        Statistics is the science of collecting, analyzing, interpreting, and presenting data. It helps us make informed decisions in fields like science, business, psychology, and more.
+      </p>
+    </section>
+
+    <section>
+      <h2>📈 Measures of Central Tendency</h2>
+
+      <h3>Mean (Average)</h3>
+      <p><strong>Definition:</strong> Add all values and divide by how many there are.</p>
+      <p><strong>Example:</strong> (10 + 20 + 30) / 3 = <code>20</code></p>
+
+      <h3>Median</h3>
+      <p><strong>Definition:</strong> The middle value when data is sorted.</p>
+      <p><strong>Example:</strong> [3, 5, 7] → Median = <code>5</code></p>
+
+      <h3>Mode</h3>
+      <p><strong>Definition:</strong> The value(s) that appear most often.</p>
+      <p><strong>Example:</strong> [2, 2, 3, 4] → Mode = <code>2</code></p>
+    </section>
+
+    <section>
+      <h2>📊 Measures of Spread</h2>
+
+      <h3>Range</h3>
+      <p><strong>Definition:</strong> Highest value minus lowest value.</p>
+      <p><strong>Example:</strong> [2, 5, 9] → 9 - 2 = <code>7</code></p>
+
+      <h3>Variance (σ²)</h3>
+      <p><strong>Definition:</strong> The average of squared differences from the mean.</p>
+      <p><strong>Formula:</strong> σ² = Σ(x - μ)² / N</p>
+
+      <h3>Standard Deviation (σ)</h3>
+      <p><strong>Definition:</strong> The square root of the variance. Shows how spread out data is.</p>
+    </section>
+
+    <section>
+      <h2>📏 Z-Scores & The Normal Distribution</h2>
+
+      <h3>Z-Score</h3>
+      <p><strong>Definition:</strong> How many standard deviations a value is from the mean.</p>
+      <p><strong>Formula:</strong> z = (x - μ) / σ</p>
+      <p><strong>Example:</strong> z = (85 - 70) / 10 = <code>1.5</code></p>
+
+      <h3>Z-Table (Partial)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Z</th>
+            <th>Area (Left)</th>
+            <th>Percentile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0.0</td><td>0.5000</td><td>50%</td></tr>
+          <tr><td>1.0</td><td>0.8413</td><td>84.13%</td></tr>
+          <tr><td>1.5</td><td>0.9332</td><td>93.32%</td></tr>
+          <tr><td>2.0</td><td>0.9772</td><td>97.72%</td></tr>
+          <tr><td>3.0</td><td>0.9987</td><td>99.87%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>📐 Distribution Shape</h2>
+
+      <h3>Skewness</h3>
+      <p><strong>Definition:</strong> Measures if the data is symmetrical or skewed.</p>
+      <ul>
+        <li>➡️ Positive skew: longer tail on the right (e.g., income)</li>
+        <li>⬅️ Negative skew: longer tail on the left</li>
+      </ul>
+
+      <h3>Kurtosis</h3>
+      <p><strong>Definition:</strong> Measures how heavy or light the tails of a distribution are.</p>
+    </section>
+
+    <section>
+      <h2>📉 Correlation & Relationships</h2>
+
+      <h3>Correlation (r)</h3>
+      <p><strong>Definition:</strong> Measures the linear relationship between two variables.</p>
+      <p><strong>Range:</strong> -1 to +1</p>
+      <p><strong>Example:</strong> r = 0.9 → strong positive correlation</p>
+    </section>
+
+    <section>
+      <h2>🧪 Hypothesis Testing</h2>
+
+      <h3>What is Hypothesis Testing?</h3>
+      <p>It’s a method to test a claim (hypothesis) about a population using sample data.</p>
+      <ul>
+        <li><strong>H₀ (Null):</strong> No effect or no difference</li>
+        <li><strong>H₁ (Alt):</strong> There is an effect or difference</li>
+      </ul>
+
+      <h3>P-Value</h3>
+      <p><strong>Definition:</strong> Probability of getting your result (or more extreme) if H₀ is true.</p>
+      <p><strong>Rule:</strong> If p < 0.05 → reject H₀</p>
+    </section>
+
+    <section>
+      <h2>📊 Confidence Intervals</h2>
+      <p><strong>Definition:</strong> A range likely to contain the true population parameter.</p>
+      <p><strong>Example:</strong> "We are 95% confident the mean is between 48 and 52."</p>
+    </section>
+
+    <section>
+      <h2>📚 Further Learning & Tools</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank">Khan Academy – Statistics</a></li>
+        <li><a href="https://www.statisticshowto.com/" target="_blank">Statistics How To</a></li>
+        <li><a href="https://www.socscistatistics.com/" target="_blank">Social Science Statistics Tools</a></li>
+        <li><a href="data-resources.html">📘 Data Science & Analytics Resources →</a></li>
+      </ul>
+    </section>
+
+  </main>
+  <script src="navbar-fix.js"></script>
+  <footer>
+    <p>&copy; 2026 YG-Tech. All Rights Reserved.</p>
+    <p class="footer-tagline">Useful technology for work, learning, and everyday problem-solving.</p>
+    <p class="footer-links"><a href="support.html">Support</a> &bull; <a href="privacy.html">Privacy</a> &bull; <a href="terms.html">Terms</a> &bull; <a href="changelog.html">Release Notes</a></p>
+</footer>
+
+ 
+</body>
+</html>

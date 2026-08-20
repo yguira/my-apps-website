@@ -111,7 +111,11 @@
 
   function getQuestionTime(question) {
     const times = config.times || {};
-    return Number(times[question.difficulty] || config.defaultTime || 12);
+    const baseTime = Number(times[question.difficulty] || config.defaultTime || 12);
+    const extraTime = Number(config.timeBonus ?? 3);
+
+    // Give every quiz a little more breathing room without changing each data file.
+    return Math.max(5, baseTime + extraTime);
   }
 
   function updateStreakDisplay() {
@@ -175,6 +179,7 @@
     progressElem.textContent = `Question ${currentQuestionIndex + 1} of ${quizQuestions.length}`;
     categoryElem.textContent = `${current.category || "Quiz"} • ${String(current.difficulty).toUpperCase()}`;
     questionElem.textContent = current.question;
+    updateQuestionImage(current);
 
     choicesElem.innerHTML = "";
     feedbackElem.textContent = "";
@@ -198,6 +203,37 @@
         questionBox.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 100);
     }
+  }
+
+
+  function updateQuestionImage(question) {
+    let imageElem = document.getElementById("quiz-question-image");
+
+    if (!imageElem) {
+      imageElem = document.createElement("img");
+      imageElem.id = "quiz-question-image";
+      imageElem.className = "quiz-question-image";
+      imageElem.loading = "eager";
+      questionElem.parentNode.insertBefore(imageElem, questionElem);
+    }
+
+    if (!question.image) {
+      imageElem.style.display = "none";
+      imageElem.removeAttribute("src");
+      imageElem.removeAttribute("alt");
+      return;
+    }
+
+    imageElem.style.display = "block";
+    imageElem.alt = question.imageAlt || "Quiz image";
+    imageElem.src = question.image;
+
+    imageElem.onerror = () => {
+      imageElem.style.display = "none";
+      if (question.imageFallback) {
+        questionElem.textContent = `${question.imageFallback} ${question.question}`;
+      }
+    };
   }
 
   function checkAnswer(selected, selectedButton) {

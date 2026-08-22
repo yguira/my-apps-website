@@ -2557,3 +2557,118 @@ body.lightbox-open { overflow: hidden; }
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
+
+/* =========================================================
+   EN / FR LANGUAGE SWITCHER
+   Keeps the existing YG-Tech navigation design while making
+   language selection visible on desktop and mobile.
+========================================================= */
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 4px;
+  padding: 4px;
+  margin-left: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 12px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.language-globe {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.language-option {
+  min-width: 38px;
+  height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.84);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-option:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.language-option.active {
+  background: #ffffff;
+  color: #1e3a8a;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+}
+
+.language-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 960px) {
+  .nav-container {
+    row-gap: 8px;
+  }
+
+  .language-switcher {
+    margin-left: auto;
+    margin-right: 4px;
+  }
+
+  .hamburger {
+    order: 3;
+  }
+
+  .nav-links {
+    order: 4;
+  }
+}
+
+@media (max-width: 420px) {
+  .language-switcher {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .language-globe {
+    width: 24px;
+    height: 26px;
+    font-size: 0.86rem;
+  }
+
+  .language-option {
+    min-width: 34px;
+    height: 28px;
+    padding: 0 7px;
+    font-size: 0.74rem;
+  }
+}
+
+/* Keep navigation ordering predictable when the language switcher is present. */
+.logo { order: 1; }
+.nav-links { order: 2; }
+.language-switcher { order: 3; }
+.hamburger { order: 4; }
+
+@media (max-width: 960px) {
+  .logo { order: 1; }
+  .language-switcher { order: 2; }
+  .hamburger { order: 3; }
+  .nav-links { order: 4; }
+}

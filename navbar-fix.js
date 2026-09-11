@@ -2,17 +2,32 @@
 // Resolves links from this script's location so one navbar works from root and nested pages.
 
 (function () {
-  const navbarPlaceholder = document.getElementById('navbar');
-  if (!navbarPlaceholder) return;
-
   const scriptElement = document.currentScript;
-  const scriptUrl = scriptElement
+  const scriptUrl = scriptElement && scriptElement.src
     ? new URL(scriptElement.src, window.location.href)
     : new URL('navbar-fix.js', window.location.href);
   const siteRoot = new URL('./', scriptUrl);
   const siteUrl = (path) => new URL(path, siteRoot).href;
   const currentLanguage = () => window.YGI18N?.getLanguage?.() || 'en';
   const t = (text) => window.YGI18N?.t?.(text) || text;
+
+  // Load the site-wide quiz/article spotlight system from the site root.
+  // This happens BEFORE the navbar check so the spotlights still work even
+  // on a page where the navbar placeholder is missing or changed.
+  if (!window.__YGTECH_PROMO_SCRIPT_REQUESTED__) {
+    window.__YGTECH_PROMO_SCRIPT_REQUESTED__ = true;
+
+    const promoScript = document.createElement('script');
+    promoScript.src = siteUrl('js/side-promos.js?v=20260910b');
+    promoScript.dataset.ygtechSidePromos = 'true';
+    promoScript.addEventListener('error', () => {
+      console.error('YG-Tech side promotions failed to load:', promoScript.src);
+    });
+    document.head.appendChild(promoScript);
+  }
+
+  const navbarPlaceholder = document.getElementById('navbar');
+  if (!navbarPlaceholder) return;
 
   fetch(siteUrl('navbar.html'))
     .then((response) => {

@@ -1,20 +1,7 @@
-YG-Tech Emoji Challenge Update
+YG-Tech Assistant v4 — integrated chat frame
 
-This update replaces the Brain Teasers card on quizzes.html with Emoji Challenge.
+Replace styles.css in your website root. No changes to index.html, chat.js, or js/chat-smart.js are needed.
 
-Files to copy into the root of your website project:
-- quizzes.html (replace existing)
-- quizzes/emoji-challenge.html (new)
-- quizzes/emoji-challenge-data.js (new)
+The ZIP includes only styles.css because this is a CSS-only layout update. The conversation, suggested questions and composer already share the same #chat-container in your existing HTML.
 
-The old brain-teasers.html and brain-teasers-data.js files can stay in the project; they will no longer appear on the quiz list. You may delete them later if you want.
-
-Test locally:
-python -m http.server 5500
-Then open:
-http://localhost:5500/quizzes.html
-
-Commit:
-git add .
-git commit -m "Replace Brain Teasers with Emoji Challenge"
-git push
+Run python -m http.server 5501 and hard-refresh the page.

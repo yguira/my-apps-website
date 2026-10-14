@@ -15,6 +15,7 @@
   let previousUserText = sessionStorage.getItem("previousUserText") || "";
   let lastIntent = sessionStorage.getItem("lastChatIntent") || "";
   let lastBotResponse = "";
+  let pendingSmartLinks = [];
 
   const isFrench = () => window.YGI18N?.getLanguage?.() === "fr";
   const local = (english, french) => isFrench() ? french : english;
@@ -138,7 +139,10 @@
     attemptCount++;
     sessionStorage.setItem("chatAttemptCount", attemptCount);
 
-    const botResponse = getBotResponse(userText, attemptCount);
+    // Offline-first smart layer. Future AI adapters can use the same result shape.
+    const smart = window.YGChatSmart?.answer(userText, isFrench() ? "fr" : "en") || null;
+    pendingSmartLinks = smart?.links || [];
+    const botResponse = smart?.text || getBotResponse(userText, attemptCount);
     showTypingIndicator(botResponse);
   }
 
@@ -736,14 +740,14 @@
 
     const typingDiv = document.createElement("div");
     typingDiv.className = "bot-message typing-indicator";
-    typingDiv.textContent = local("AI is typing", "L’IA écrit");
+    typingDiv.textContent = local("Assistant is typing", "L’assistant écrit");
     messages.appendChild(typingDiv);
     scrollToLatest();
 
     let dotCount = 0;
     const typingAnimation = setInterval(() => {
       dotCount = (dotCount + 1) % 4;
-      typingDiv.textContent = `${local("AI is typing", "L’IA écrit")}${".".repeat(dotCount)}`;
+      typingDiv.textContent = `${local("Assistant is typing", "L’assistant écrit")}${".".repeat(dotCount)}`;
     }, 350);
 
     // Longer responses take slightly longer, with random jitter so the timing does not feel mechanical.
@@ -752,7 +756,20 @@
     setTimeout(() => {
       clearInterval(typingAnimation);
       typingDiv.remove();
-      appendMessage(`${local("AI:", "IA :")} ${response}`, "bot-message");
+      appendMessage(`${local("Assistant:", "Assistant :")} ${response}`, "bot-message");
+      if (pendingSmartLinks.length) {
+        const links = document.createElement("div");
+        links.className = "yg-chat-action-links";
+        pendingSmartLinks.forEach(item => {
+          const a = document.createElement("a");
+          a.href = item.href;
+          a.textContent = item.label;
+          links.appendChild(a);
+        });
+        messages.appendChild(links);
+        pendingSmartLinks = [];
+        scrollToLatest();
+      }
       setChatAvailability(true);
     }, responseDelay);
   }
@@ -801,10 +818,65 @@
     }
   });
 
+
+  // Chat UI: introductory bubble, bilingual labels and example questions.
+  const chatCopy = {
+    en: {
+      eyebrow: "YOUR WEBSITE GUIDE", title: "YG-Tech Assistant",
+      subtitle: "Explore the website, find useful tools, or ask me a question.",
+      status: "● Ready to help", tryLabel: "TRY A QUESTION", inputLabel: "Your message",
+      placeholder: "Type your question here...", send: "Send",
+      hint: "Press Enter to send your message.",
+      greeting: "Hi there! 👋 I can help you explore YG-Tech, find downloads, learn about Invoice Studio, choose a quiz, or work through a quick calculation. What would you like to do?",
+      chips: ["✨ What can you do?", "😄 Tell me a joke", "📄 Invoice Studio"]
+    },
+    fr: {
+      eyebrow: "VOTRE GUIDE DU SITE", title: "Assistant YG-Tech",
+      subtitle: "Explorez le site, trouvez des outils utiles ou posez-moi une question.",
+      status: "● Prêt à vous aider", tryLabel: "ESSAYEZ UNE QUESTION", inputLabel: "Votre message",
+      placeholder: "Écrivez votre question ici...", send: "Envoyer",
+      hint: "Appuyez sur Entrée pour envoyer votre message.",
+      greeting: "Bonjour ! 👋 Je peux vous aider à explorer YG-Tech, trouver des téléchargements, découvrir Invoice Studio, choisir un quiz ou faire un petit calcul. Que souhaitez-vous faire ?",
+      chips: ["✨ Que peux-tu faire ?", "😄 Raconte une blague", "📄 Invoice Studio"]
+    }
+  };
+  function renderChatWelcome() {
+    const copy = chatCopy[isFrench() ? "fr" : "en"];
+    const ids = { "chat-eyebrow": copy.eyebrow, "chat-title": copy.title,
+      "chat-subtitle": copy.subtitle, "chat-status": copy.status,
+      "chat-try-label": copy.tryLabel, "chat-input-label": copy.inputLabel,
+      "chat-send-label": copy.send, "chat-hint": copy.hint };
+    Object.entries(ids).forEach(([id, value]) => {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    });
+    input.placeholder = copy.placeholder;
+    input.setAttribute("aria-label", copy.placeholder);
+    document.querySelectorAll(".yg-chat-chip").forEach((chip, index) => {
+      chip.textContent = copy.chips[index];
+    });
+    messages.innerHTML = "";
+    const bubble = document.createElement("div");
+    bubble.className = "bot-message yg-chat-welcome";
+    bubble.textContent = copy.greeting;
+    messages.appendChild(bubble);
+  }
+  document.querySelectorAll(".yg-chat-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      if (input.disabled) return;
+      input.value = isFrench() ? chip.dataset.chatQuestionFr : chip.dataset.chatQuestion;
+      sendMessage();
+    });
+  });
+  messages.addEventListener("click", event => {
+    if (!event.target.closest("a, button")) input.focus();
+  });
+  renderChatWelcome();
+
   // Start a fresh playful conversation when the visitor changes language so
   // old English and new French messages are never mixed in the same thread.
   window.addEventListener("ygtech:languagechange", () => {
-    messages.innerHTML = "";
+    renderChatWelcome();
     attemptCount = 0;
     previousUserText = "";
     lastIntent = "";
@@ -812,6 +884,7 @@
     sessionStorage.removeItem("chatAttemptCount");
     sessionStorage.removeItem("previousUserText");
     sessionStorage.removeItem("lastChatIntent");
+    window.YGChatSmart?.reset();
   });
 
   // Keep compatibility with the existing inline onclick="sendMessage()" button.

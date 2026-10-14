@@ -11,7 +11,7 @@
 
   <title>YG-Tech | Software, Learning, Data & Practical Tools</title>
 
-  <link rel="stylesheet" href="styles.css?v=20260925"" />
+  <link rel="stylesheet" href="styles.css?v=20261014-chat5" />
 </head>
 
 <body class="home-page">
@@ -274,30 +274,37 @@
     <!-- =======================================================
          CHATBOX
     ======================================================== -->
-    <section id="chatbox">
-
-      <h2>Ask Me Anything!</h2>
-
-      <div id="chat-container">
-
-        <div id="messages"></div>
-
-        <div class="chat-input">
-
-          <input
-            type="text"
-            id="user-input"
-            placeholder="Ask a question..."
-          />
-
-          <button onclick="sendMessage()">
-            Send
-          </button>
-
+    <section id="chatbox" aria-labelledby="chat-title">
+      <div class="yg-chat-heading">
+        <span class="yg-chat-avatar" aria-hidden="true">🤖</span>
+        <div>
+          <span class="yg-chat-eyebrow" id="chat-eyebrow">YOUR WEBSITE GUIDE</span>
+          <h2 id="chat-title">YG-Tech Assistant</h2>
+          <p id="chat-subtitle">Explore the website, find useful tools, or ask me a question.</p>
         </div>
-
+        <span class="yg-chat-status" id="chat-status">● Ready to help</span>
       </div>
-
+      <div id="chat-container">
+        <div class="yg-chat-panel" aria-label="Chat assistant panel">
+          <div id="messages" role="log" aria-live="polite" aria-label="Chat conversation"></div>
+        <div class="yg-chat-suggestions" id="chat-suggestions" aria-label="Suggested questions">
+          <span id="chat-try-label">TRY A QUESTION</span>
+          <div class="yg-chat-chip-row">
+            <button type="button" class="yg-chat-chip" data-chat-question="What can you do?" data-chat-question-fr="Que peux-tu faire ?">✨ What can you do?</button>
+            <button type="button" class="yg-chat-chip" data-chat-question="Tell me a joke" data-chat-question-fr="Raconte une blague">😄 Tell me a joke</button>
+            <button type="button" class="yg-chat-chip" data-chat-question="Tell me about Invoice Studio" data-chat-question-fr="Parle-moi d'Invoice Studio">📄 Invoice Studio</button>
+          </div>
+        </div>
+        <div class="chat-input">
+          <label class="yg-chat-input-label" for="user-input" id="chat-input-label">Your message</label>
+          <div class="yg-chat-composer">
+            <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off" aria-label="Type your question" />
+            <button type="button" onclick="sendMessage()" aria-label="Send message"><span aria-hidden="true">➤</span> <span id="chat-send-label">Send</span></button>
+          </div>
+          <p class="yg-chat-hint" id="chat-hint">Press Enter to send your message.</p>
+        </div>
+        </div><!-- /.yg-chat-panel -->
+      </div>
     </section>
 
 
@@ -648,7 +655,8 @@
   <script src="js/translations-fr.js"></script>
   <script src="navbar-fix.js"></script>
   <script src="gallery.js"></script>
-  <script src="chat.js"></script>
+  <script src="js/chat-smart.js?v=20261014-smart2"></script>
+  <script src="chat.js?v=20261014-polish3"></script>
 
 
   <!-- =========================================================
